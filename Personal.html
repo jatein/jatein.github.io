@@ -38,7 +38,7 @@
     <main id="main-content" style="margin-top: 73px; min-height: 80vh; padding: 0 5%; position: relative; z-index: 10;">
         
         <div class="backstory-header">
-            <h2 style="color: var(--accent-color); font-size: 4.236rem; line-height: 1.1; margin: 0; text-transform: uppercase;">Personal Projects</h2>
+            <h2 class="page-section-title">Personal Projects</h2>
         </div>
 
         <div class="project-list-container">
@@ -106,7 +106,6 @@
                         
                         <video class="vfx-slide" autoplay muted loop playsinline style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 1; z-index: 2; transition: opacity 0.5s ease;">
                             <source src="Videos/Unreal_Chaos_Destruction.mp4" type="video/mp4">
-                        </video>
                         </video>
 
                         <button class="vfx-prev" aria-label="Previous Video" style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); width: 50px; height: 50px; border-radius: 50%; background: rgba(0,0,0,0.6); border: 1px solid rgba(255,255,255,0.2); color: white; font-size: 1.5rem; cursor: pointer; z-index: 10; display: flex; align-items: center; justify-content: center; backdrop-filter: blur(4px); transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);">❮</button>
@@ -442,12 +441,12 @@
         <a href="https://www.linkedin.com/in/jatin-nakashe" target="_blank" aria-label="LinkedIn">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
         </a>
-        <a href="mailto:jatinnakashe@gmail.com" aria-label="Email">
+        <a href="/cdn-cgi/l/email-protection#84eee5f0edeaeae5efe5f7ece1c4e3e9e5ede8aae7ebe9" aria-label="Email">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
         </a>
     </div>
 
-    <script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
         function revealPage() {
             window.isNavigating = false;
             const transitionEl = document.querySelector('.page-transition');
@@ -630,6 +629,14 @@
 
             lightbox.addEventListener('click', function(e) { if (e.target === lightbox || e.target === wrapper) closeLightbox(); });
 
+            // Touch swipe support for lightbox
+            let touchStartX = 0;
+            lightbox.addEventListener('touchstart', function(e) { touchStartX = e.changedTouches[0].screenX; }, { passive: true });
+            lightbox.addEventListener('touchend', function(e) {
+                const diff = touchStartX - e.changedTouches[0].screenX;
+                if (Math.abs(diff) > 50) { diff > 0 ? showNext() : showPrev(); }
+            }, { passive: true });
+
             window.addEventListener('keydown', function(e) {
                 if (lightbox.getAttribute('aria-hidden') === 'false') {
                     if (e.key === 'Escape') closeLightbox();
@@ -675,6 +682,18 @@
                     updateSlides();
                 });
 
+                // Touch swipe support for carousel
+                let carouselTouchStartX = 0;
+                carousel.addEventListener('touchstart', (e) => { carouselTouchStartX = e.changedTouches[0].screenX; }, { passive: true });
+                carousel.addEventListener('touchend', (e) => {
+                    const diff = carouselTouchStartX - e.changedTouches[0].screenX;
+                    if (Math.abs(diff) > 40) {
+                        if (diff > 0) { current = (current + 1) % slides.length; }
+                        else { current = (current - 1 + slides.length) % slides.length; }
+                        updateSlides();
+                    }
+                }, { passive: true });
+
                 [btnPrev, btnNext].forEach(btn => {
                     btn.addEventListener('mouseenter', () => {
                         btn.style.background = 'var(--accent-color)';
@@ -688,11 +707,3 @@
                         btn.style.color = 'white';
                         btn.style.borderColor = 'rgba(255,255,255,0.2)';
                         btn.style.transform = 'translateY(-50%) scale(1)';
-                        btn.style.boxShadow = 'none';
-                    });
-                });
-            });
-        });
-    </script>
-</body>
-</html>

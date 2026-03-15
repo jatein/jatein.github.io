@@ -38,7 +38,7 @@
     <main id="main-content" style="margin-top: 73px; min-height: 80vh; padding: 0 5%; position: relative; z-index: 10;">
         
         <div class="backstory-header">
-            <h2 style="color: var(--accent-color); font-size: 4.236rem; line-height: 1.1; margin: 0; text-transform: uppercase;">Commercial Games</h2>
+            <h2 class="page-section-title">Commercial Games</h2>
         </div>
 
         <div class="project-list-container">
@@ -1738,6 +1738,14 @@
             lightbox.addEventListener('click', function(e) {
                 if (e.target === lightbox || e.target === wrapper) closeLightbox();
             });
+
+            // Touch swipe support for lightbox
+            let touchStartX = 0;
+            lightbox.addEventListener('touchstart', function(e) { touchStartX = e.changedTouches[0].screenX; }, { passive: true });
+            lightbox.addEventListener('touchend', function(e) {
+                const diff = touchStartX - e.changedTouches[0].screenX;
+                if (Math.abs(diff) > 50) { diff > 0 ? showNext() : showPrev(); }
+            }, { passive: true });
 
             window.addEventListener('keydown', function(e) {
                 if (lightbox.getAttribute('aria-hidden') === 'false') {
