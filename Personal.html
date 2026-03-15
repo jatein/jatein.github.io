@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Projects | Jatin Nakashe</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+</head>
+<body>
+
+    <div class="page-transition">
+        <div class="swipe-layer cyan-layer"></div>
+        <div class="swipe-layer dark-layer"></div>
+    </div>
+
+    <div class="global-video-bg">
+        <video autoplay muted loop playsinline id="bg-video">
+            <source src="Videos/background.mp4" type="video/mp4">
+        </video>
+        <div class="video-overlay"></div>
+    </div>
+
+    <nav class="top-nav">
+        <a href="index.html" class="nav-logo">Jatin Nakashe</a>
+        <div class="nav-links">
+            <a href="index.html#about">About</a>
+            <a href="index.html#backstory">Background</a>
+            <a href="index.html#experience">Work</a>
+            <a href="index.html#skills">Skills</a>
+        </div>
+        <a href="Portfolio.html" class="nav-cta active">Portfolio</a>
+    </nav>
+
+    <div class="vertical-side-title">PERSONAL</div>
+
+    <main id="main-content" style="margin-top: 73px; min-height: 80vh; padding: 0 5%; position: relative; z-index: 10;">
+        
+        <div class="backstory-header">
+            <h2 style="color: var(--accent-color); font-size: 4.236rem; line-height: 1.1; margin: 0; text-transform: uppercase;">Personal Projects</h2>
+        </div>
+
+        <div class="project-list-container">
+            
+            <div class="project-row-card reveal delay-1">
+                <div class="project-row-image" style="background: url('Images/Breach/BREACH.png') center/cover no-repeat;"></div>
+                <div class="project-row-content">
+                    <div class="project-header">
+                        <h3>BREACH</h3>
+                        <span class="role-tag">Solo Developer</span>
+                    </div>
+                    
+                    <p>A neo-noir glitch-themed arcade platformer where players stack shells to fuel chained double jumps while breaching deeper layers of a corrupted digital system.</p>
+                    
+                    <h4 class="task-heading">Project Overview</h4>
+                    <ul class="task-list">
+                        <li>Designed and developed the entire game as a solo developer</li>
+                        <li>Built the core jumping mechanics and gameplay progression</li>
+                        <li>Implemented visuals, UI systems and gameplay features using Unity</li>
+                    </ul>
+
+                    <button class="btn-pill project-btn view-details-btn" data-detail="#personal-1">
+                        <span class="default-content">MORE INFO ↗</span>
+                        <span class="hover-arrow">➔</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="project-row-card reveal delay-2">
+                <div class="project-row-content" style="width: 100%;">
+                    <div class="project-header">
+                        <h3>Unreal Engine VFX</h3>
+                        <span class="role-tag">Technical Art</span>
+                    </div>
+                    
+                    <p style="font-size: 1.1rem; color: #cccccc; margin-bottom: 2rem;">
+                        Particle test in Unreal Niagara.
+                    </p>
+                    
+                    <div class="vfx-carousel" style="position: relative; width: 100%; aspect-ratio: 16/9; border-radius: 8px; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.1); background: #000; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                        
+                        <video class="vfx-slide" autoplay muted loop playsinline style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 1; z-index: 2; transition: opacity 0.5s ease;">
+                            <source src="Videos/VFX Test/Arrow_VFX_Test.mp4" type="video/mp4">
+                        </video>
+                        
+                        <video class="vfx-slide" autoplay muted loop playsinline style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 0; z-index: 1; transition: opacity 0.5s ease;">
+                            <source src="Videos/VFX Test/Dash_VFX_Test.mp4" type="video/mp4">
+                        </video>
+
+                        <button class="vfx-prev" aria-label="Previous Video" style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); width: 50px; height: 50px; border-radius: 50%; background: rgba(0,0,0,0.6); border: 1px solid rgba(255,255,255,0.2); color: white; font-size: 1.5rem; cursor: pointer; z-index: 10; display: flex; align-items: center; justify-content: center; backdrop-filter: blur(4px); transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);">❮</button>
+                        
+                        <button class="vfx-next" aria-label="Next Video" style="position: absolute; right: 1rem; top: 50%; transform: translateY(-50%); width: 50px; height: 50px; border-radius: 50%; background: rgba(0,0,0,0.6); border: 1px solid rgba(255,255,255,0.2); color: white; font-size: 1.5rem; cursor: pointer; z-index: 10; display: flex; align-items: center; justify-content: center; backdrop-filter: blur(4px); transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);">❯</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-row-card reveal delay-3">
+                <div class="project-row-content" style="width: 100%;">
+                    <div class="project-header">
+                        <h3>Unreal Engine Chaos Destruction</h3>
+                        <span class="role-tag">Technical Art</span>
+                    </div>
+                    
+                    <div class="vfx-carousel" style="position: relative; width: 100%; aspect-ratio: 16/9; border-radius: 8px; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.1); background: #000; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                        
+                        <video class="vfx-slide" autoplay muted loop playsinline style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 1; z-index: 2; transition: opacity 0.5s ease;">
+                            <source src="Videos/Unreal_Chaos_Destruction.mp4" type="video/mp4">
+                        </video>
+                        </video>
+
+                        <button class="vfx-prev" aria-label="Previous Video" style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); width: 50px; height: 50px; border-radius: 50%; background: rgba(0,0,0,0.6); border: 1px solid rgba(255,255,255,0.2); color: white; font-size: 1.5rem; cursor: pointer; z-index: 10; display: flex; align-items: center; justify-content: center; backdrop-filter: blur(4px); transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);">❮</button>
+                        
+                        <button class="vfx-next" aria-label="Next Video" style="position: absolute; right: 1rem; top: 50%; transform: translateY(-50%); width: 50px; height: 50px; border-radius: 50%; background: rgba(0,0,0,0.6); border: 1px solid rgba(255,255,255,0.2); color: white; font-size: 1.5rem; cursor: pointer; z-index: 10; display: flex; align-items: center; justify-content: center; backdrop-filter: blur(4px); transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);">❯</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-row-card reveal delay-3">
+                <div class="project-row-content" style="width: 100%;">
+                    <div class="project-header">
+                        <h3>Gothic Cemetery Environment</h3>
+                        <span class="role-tag">Environment Art</span>
+                    </div>
+                    
+                    <p style="font-size: 1.1rem; color: #cccccc; margin-bottom: 2rem;">
+                        Atmospheric level design and environment art created in Unreal Engine.
+                    </p>
+                    
+                    <div class="vfx-carousel" style="position: relative; width: 100%; aspect-ratio: 16/9; border-radius: 8px; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.1); background: #000; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                        
+                        <img class="vfx-slide" src="Images/Gothic Cemetery/Gothic_cemetery_scene1.jpg" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 1; z-index: 2; transition: opacity 0.5s ease;">
+                        
+                        <img class="vfx-slide" src="Images/Gothic Cemetery/Gothic_cemetery_scene2.jpg" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 0; z-index: 1; transition: opacity 0.5s ease;">
+
+                        <img class="vfx-slide" src="Images/Gothic Cemetery/Gothic_cemetery_scene3.jpg" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 0; z-index: 1; transition: opacity 0.5s ease;">
+
+                        <img class="vfx-slide" src="Images/Gothic Cemetery/Gothic_cemetery_scene4.jpg" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 0; z-index: 1; transition: opacity 0.5s ease;">
+
+                        <img class="vfx-slide" src="Images/Gothic Cemetery/Gothic_cemetery_scene5.jpg" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 0; z-index: 1; transition: opacity 0.5s ease;">
+
+                        <button class="vfx-prev" aria-label="Previous Image" style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); width: 50px; height: 50px; border-radius: 50%; background: rgba(0,0,0,0.6); border: 1px solid rgba(255,255,255,0.2); color: white; font-size: 1.5rem; cursor: pointer; z-index: 10; display: flex; align-items: center; justify-content: center; backdrop-filter: blur(4px); transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);">❮</button>
+                        
+                        <button class="vfx-next" aria-label="Next Image" style="position: absolute; right: 1rem; top: 50%; transform: translateY(-50%); width: 50px; height: 50px; border-radius: 50%; background: rgba(0,0,0,0.6); border: 1px solid rgba(255,255,255,0.2); color: white; font-size: 1.5rem; cursor: pointer; z-index: 10; display: flex; align-items: center; justify-content: center; backdrop-filter: blur(4px); transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);">❯</button>
+                    </div>
+                    
+                </div>
+            </div>
+
+
+            <div class="project-row-card reveal delay-4">
+                <div class="project-row-content" style="width: 100%;">
+                    <div class="project-header">
+                        <h3>Lowpoly Battleground</h3>
+                        <span class="role-tag">Environment Art</span>
+                    </div>
+                    
+                    <p style="font-size: 1.1rem; color: #cccccc; margin-bottom: 2rem;">
+                        Atmospheric level design and environment art created in Unreal Engine.
+                    </p>
+                    
+                    <div class="vfx-carousel" style="position: relative; width: 100%; aspect-ratio: 16/9; border-radius: 8px; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.1); background: #000; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                        
+                        <img class="vfx-slide" src="Images/Lowpoly Battleground/Lowpoly_Battleground_scene1.jpg" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 1; z-index: 2; transition: opacity 0.5s ease;">
+                        
+                        <img class="vfx-slide" src="Images/Lowpoly Battleground/Lowpoly_Battleground_scene2.jpg" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 0; z-index: 1; transition: opacity 0.5s ease;">
+
+                        <img class="vfx-slide" src="Images/Lowpoly Battleground/Lowpoly_Battleground_scene3.jpg" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 0; z-index: 1; transition: opacity 0.5s ease;">
+
+                        <img class="vfx-slide" src="Images/Lowpoly Battleground/Lowpoly_Battleground_scene4.jpg" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 0; z-index: 1; transition: opacity 0.5s ease;">
+
+                        <img class="vfx-slide" src="Images/Lowpoly Battleground/Lowpoly_Battleground_scene5.jpg" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 0; z-index: 1; transition: opacity 0.5s ease;">
+
+                        <img class="vfx-slide" src="Images/Lowpoly Battleground/Lowpoly_Battleground_scene6.jpg" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 0; z-index: 1; transition: opacity 0.5s ease;">
+
+                        <img class="vfx-slide" src="Images/Lowpoly Battleground/Lowpoly_Battleground_scene7.jpg" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 0; z-index: 1; transition: opacity 0.5s ease;">
+
+                        <button class="vfx-prev" aria-label="Previous Image" style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); width: 50px; height: 50px; border-radius: 50%; background: rgba(0,0,0,0.6); border: 1px solid rgba(255,255,255,0.2); color: white; font-size: 1.5rem; cursor: pointer; z-index: 10; display: flex; align-items: center; justify-content: center; backdrop-filter: blur(4px); transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);">❮</button>
+                        
+                        <button class="vfx-next" aria-label="Next Image" style="position: absolute; right: 1rem; top: 50%; transform: translateY(-50%); width: 50px; height: 50px; border-radius: 50%; background: rgba(0,0,0,0.6); border: 1px solid rgba(255,255,255,0.2); color: white; font-size: 1.5rem; cursor: pointer; z-index: 10; display: flex; align-items: center; justify-content: center; backdrop-filter: blur(4px); transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);">❯</button>
+                    </div>
+                    
+                </div>
+            </div>
+
+
+            <div class="project-row-card reveal delay-5">
+                <div class="project-row-content" style="width: 100%;">
+                    <div class="project-header">
+                        <h3>Fantasy Room</h3>
+                        <span class="role-tag">Environment Art</span>
+                    </div>
+                    
+                    <p style="font-size: 1.1rem; color: #cccccc; margin-bottom: 2rem;">
+                        Atmospheric level design and environment art created in Unreal Engine.
+                    </p>
+                    
+                    <div class="vfx-carousel" style="position: relative; width: 100%; aspect-ratio: 16/9; border-radius: 8px; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.1); background: #000; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                        
+                        <img class="vfx-slide" src="Images/Fantasy Room/Fantasy_Room_scene1.jpg" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 1; z-index: 2; transition: opacity 0.5s ease;">
+                        
+                        <img class="vfx-slide" src="Images/Fantasy Room/Fantasy_Room_scene2.jpg" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 0; z-index: 1; transition: opacity 0.5s ease;">
+
+                        <img class="vfx-slide" src="Images/Fantasy Room/Fantasy_Room_scene3.jpg" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 0; z-index: 1; transition: opacity 0.5s ease;">
+
+                        <img class="vfx-slide" src="Images/Fantasy Room/Fantasy_Room_scene4.jpg" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 0; z-index: 1; transition: opacity 0.5s ease;">
+
+                        <button class="vfx-prev" aria-label="Previous Image" style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); width: 50px; height: 50px; border-radius: 50%; background: rgba(0,0,0,0.6); border: 1px solid rgba(255,255,255,0.2); color: white; font-size: 1.5rem; cursor: pointer; z-index: 10; display: flex; align-items: center; justify-content: center; backdrop-filter: blur(4px); transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);">❮</button>
+                        
+                        <button class="vfx-next" aria-label="Next Image" style="position: absolute; right: 1rem; top: 50%; transform: translateY(-50%); width: 50px; height: 50px; border-radius: 50%; background: rgba(0,0,0,0.6); border: 1px solid rgba(255,255,255,0.2); color: white; font-size: 1.5rem; cursor: pointer; z-index: 10; display: flex; align-items: center; justify-content: center; backdrop-filter: blur(4px); transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);">❯</button>
+                    </div>
+                    
+                </div>
+            </div>
+
+
+            <div class="project-row-card reveal delay-6">
+                <div class="project-row-content" style="width: 100%;">
+                    <div class="project-header">
+                        <h3>Medieval</h3>
+                        <span class="role-tag">Environment Art</span>
+                    </div>
+                    
+                    <p style="font-size: 1.1rem; color: #cccccc; margin-bottom: 2rem;">
+                        Atmospheric level design and environment art created in Unreal Engine.
+                    </p>
+                    
+                    <div class="vfx-carousel" style="position: relative; width: 100%; aspect-ratio: 16/9; border-radius: 8px; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.1); background: #000; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                        
+                        <img class="vfx-slide" src="Images/Medieval/Ancient_India_scene1.jpg" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 1; z-index: 2; transition: opacity 0.5s ease;">
+                        
+                        <img class="vfx-slide" src="Images/Medieval/Ancient_India_scene2.jpg" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 0; z-index: 1; transition: opacity 0.5s ease;">
+
+                        <img class="vfx-slide" src="Images/Medieval/Ancient_India_scene3.jpg" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 0; z-index: 1; transition: opacity 0.5s ease;">
+
+                        <img class="vfx-slide" src="Images/Medieval/Ancient_India_scene4.jpg" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 0; z-index: 1; transition: opacity 0.5s ease;">
+
+                        <img class="vfx-slide" src="Images/Medieval/Ancient_India_scene5.jpg" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 0; z-index: 1; transition: opacity 0.5s ease;">
+
+                        <img class="vfx-slide" src="Images/Medieval/Ancient_India_scene6.jpg" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 0; z-index: 1; transition: opacity 0.5s ease;">
+
+                        <img class="vfx-slide" src="Images/Medieval/Ancient_India_scene7.jpg" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 0; z-index: 1; transition: opacity 0.5s ease;">
+
+                        <img class="vfx-slide" src="Images/Medieval/Ancient_India_scene8.jpg" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 0; z-index: 1; transition: opacity 0.5s ease;">
+
+                        <img class="vfx-slide" src="Images/Medieval/Ancient_India_scene9.jpg" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 0; z-index: 1; transition: opacity 0.5s ease;">
+
+                        <img class="vfx-slide" src="Images/Medieval/Ancient_India_scene10.jpg" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 0; z-index: 1; transition: opacity 0.5s ease;">
+
+                        <button class="vfx-prev" aria-label="Previous Image" style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); width: 50px; height: 50px; border-radius: 50%; background: rgba(0,0,0,0.6); border: 1px solid rgba(255,255,255,0.2); color: white; font-size: 1.5rem; cursor: pointer; z-index: 10; display: flex; align-items: center; justify-content: center; backdrop-filter: blur(4px); transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);">❮</button>
+                        
+                        <button class="vfx-next" aria-label="Next Image" style="position: absolute; right: 1rem; top: 50%; transform: translateY(-50%); width: 50px; height: 50px; border-radius: 50%; background: rgba(0,0,0,0.6); border: 1px solid rgba(255,255,255,0.2); color: white; font-size: 1.5rem; cursor: pointer; z-index: 10; display: flex; align-items: center; justify-content: center; backdrop-filter: blur(4px); transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);">❯</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-row-card reveal delay-7">
+                <div class="project-row-content" style="width: 100%;">
+                    <div class="project-header">
+                        <h3>Matte Pantings</h3>
+                        <span class="role-tag">2D Art</span>
+                    </div>
+                    
+                    <div class="vfx-carousel" style="position: relative; width: 100%; aspect-ratio: 16/9; border-radius: 8px; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.1); background: #000; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                        
+                        <img class="vfx-slide" src="Images/Matte Paintings/Matte_Painting1.jpg" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 1; z-index: 2; transition: opacity 0.5s ease;">
+                        
+                        <img class="vfx-slide" src="Images/Matte Paintings/Matte_Painting2.jpg" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 0; z-index: 1; transition: opacity 0.5s ease;">
+
+                        <img class="vfx-slide" src="Images/Matte Paintings/Matte_Painting3.jpg" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 0; z-index: 1; transition: opacity 0.5s ease;">
+
+                        <img class="vfx-slide" src="Images/Matte Paintings/Matte_Painting4.jpg" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 0; z-index: 1; transition: opacity 0.5s ease;">
+
+                        <button class="vfx-prev" aria-label="Previous Image" style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); width: 50px; height: 50px; border-radius: 50%; background: rgba(0,0,0,0.6); border: 1px solid rgba(255,255,255,0.2); color: white; font-size: 1.5rem; cursor: pointer; z-index: 10; display: flex; align-items: center; justify-content: center; backdrop-filter: blur(4px); transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);">❮</button>
+                        
+                        <button class="vfx-next" aria-label="Next Image" style="position: absolute; right: 1rem; top: 50%; transform: translateY(-50%); width: 50px; height: 50px; border-radius: 50%; background: rgba(0,0,0,0.6); border: 1px solid rgba(255,255,255,0.2); color: white; font-size: 1.5rem; cursor: pointer; z-index: 10; display: flex; align-items: center; justify-content: center; backdrop-filter: blur(4px); transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);">❯</button>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="project-row-card reveal delay-8">
+                <div class="project-row-content" style="width: 100%;">
+                    <div class="project-header">
+                        <h3>Famba - Starwars</h3>
+                        <span class="role-tag">3D Modelling</span>
+                    </div>
+                    
+                    <div class="vfx-carousel" style="position: relative; width: 100%; aspect-ratio: 16/9; border-radius: 8px; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.1); background: #000; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                        
+                        <img class="vfx-slide" src="Images/Famba/Famba_scene1.jpg" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 1; z-index: 2; transition: opacity 0.5s ease;">
+                        
+                        <img class="vfx-slide" src="Images/Famba/Famba_scene2.jpg" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 0; z-index: 1; transition: opacity 0.5s ease;">
+
+                        <img class="vfx-slide" src="Images/Famba/Famba_scene3.jpg" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 0; z-index: 1; transition: opacity 0.5s ease;">
+
+                        <img class="vfx-slide" src="Images/Famba/Famba_scene4.jpg" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 0; z-index: 1; transition: opacity 0.5s ease;">
+
+                        <img class="vfx-slide" src="Images/Famba/Famba_scene5.jpg" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 0; z-index: 1; transition: opacity 0.5s ease;">
+
+                        <button class="vfx-prev" aria-label="Previous Image" style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); width: 50px; height: 50px; border-radius: 50%; background: rgba(0,0,0,0.6); border: 1px solid rgba(255,255,255,0.2); color: white; font-size: 1.5rem; cursor: pointer; z-index: 10; display: flex; align-items: center; justify-content: center; backdrop-filter: blur(4px); transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);">❮</button>
+                        
+                        <button class="vfx-next" aria-label="Next Image" style="position: absolute; right: 1rem; top: 50%; transform: translateY(-50%); width: 50px; height: 50px; border-radius: 50%; background: rgba(0,0,0,0.6); border: 1px solid rgba(255,255,255,0.2); color: white; font-size: 1.5rem; cursor: pointer; z-index: 10; display: flex; align-items: center; justify-content: center; backdrop-filter: blur(4px); transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);">❯</button>
+                    </div>
+                    
+                </div>
+            </div>
+
+
+            <div class="project-row-card reveal delay-9">
+                <div class="project-row-content" style="width: 100%;">
+                    <div class="project-header">
+                        <h3>Aklay - Starwars</h3>
+                        <span class="role-tag">3D Modelling</span>
+                    </div>
+                    
+                    <div class="vfx-carousel" style="position: relative; width: 100%; aspect-ratio: 16/9; border-radius: 8px; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.1); background: #000; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                        
+                        <img class="vfx-slide" src="Images/Aklay/Aklay_scene1.jpg" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 1; z-index: 2; transition: opacity 0.5s ease;">
+                        
+                        <img class="vfx-slide" src="Images/Aklay/Aklay_scene2.jpg" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 0; z-index: 1; transition: opacity 0.5s ease;">
+
+                        <img class="vfx-slide" src="Images/Aklay/Aklay_scene3.jpg" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 0; z-index: 1; transition: opacity 0.5s ease;">
+
+                        <img class="vfx-slide" src="Images/Aklay/Aklay_scene4.jpg" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 0; z-index: 1; transition: opacity 0.5s ease;">
+
+                        <button class="vfx-prev" aria-label="Previous Image" style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); width: 50px; height: 50px; border-radius: 50%; background: rgba(0,0,0,0.6); border: 1px solid rgba(255,255,255,0.2); color: white; font-size: 1.5rem; cursor: pointer; z-index: 10; display: flex; align-items: center; justify-content: center; backdrop-filter: blur(4px); transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);">❮</button>
+                        
+                        <button class="vfx-next" aria-label="Next Image" style="position: absolute; right: 1rem; top: 50%; transform: translateY(-50%); width: 50px; height: 50px; border-radius: 50%; background: rgba(0,0,0,0.6); border: 1px solid rgba(255,255,255,0.2); color: white; font-size: 1.5rem; cursor: pointer; z-index: 10; display: flex; align-items: center; justify-content: center; backdrop-filter: blur(4px); transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);">❯</button>
+                    </div>
+                    
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <div id="detail-modal" class="detail-modal" aria-hidden="true">
+        <div class="detail-modal-backdrop" data-close="true"></div>
+        <div class="detail-modal-panel large-modal" role="dialog" aria-modal="true">
+            <button class="detail-modal-close" aria-label="Close details">✕</button>
+            <div class="detail-modal-body" id="detail-modal-body" data-lenis-prevent></div>
+        </div>
+    </div>
+
+    <div id="gallery-lightbox" class="lightbox-overlay" aria-hidden="true">
+        <button class="lightbox-close" aria-label="Close Gallery">✕</button>
+        <button class="lightbox-prev" aria-label="Previous Media">❮</button>
+        <div id="lightbox-content-wrapper"></div>
+        <button class="lightbox-next" aria-label="Next Media">❯</button>
+    </div>
+
+    <div id="personal-1" class="detail-template" style="display:none">
+        <div class="modal-hero" style="background: url('Images/Breach/BREACH.png') center/cover no-repeat;">
+            <div class="modal-hero-overlay">
+                <h2 class="modal-hero-title">BREACH</h2>
+                <p class="modal-hero-subtitle">Neo-Noir Glitch Platformer.</p>
+            </div>
+        </div>
+
+        <div class="modal-split-layout">
+            <div class="modal-main-col">
+
+                <h3 class="modal-section-title">ABOUT THE GAME</h3>
+                <p>
+                    Breach is a fast-paced arcade platformer inspired by vertical jumping games.
+                    Players collect and stack shells to fuel chained double jumps while navigating
+                    through glitch-filled neon circuit environments.
+                </p>
+                <p>
+                    The game blends precision platforming mechanics with a cyberpunk aesthetic,
+                    challenging players to maintain momentum while navigating increasingly complex obstacles.
+                </p>
+
+                <h3 class="modal-section-title" style="margin-top:4rem;">MY CONTRIBUTIONS</h3>
+                <ul class="modal-feature-list contributions-list">
+                    <li>Designed and developed the entire game as a <strong>solo developer</strong>.</li>
+                    <li>Programmed <strong>custom player controllers</strong> for precise movement and jumping mechanics.</li>
+                    <li>Designed level progression and difficulty scaling.</li>
+                    <li>Created the game's <strong>neo-noir glitch visual style</strong> and UI elements.</li>
+                    <li>Implemented gameplay systems, effects, and UI using <strong>Unity</strong>.</li>
+                </ul>
+
+                <h3 class="modal-section-title" style="margin-top:4rem;">DESIGN FOCUS</h3>
+                <ul class="modal-feature-list">
+                    <li>Precision platforming mechanics</li>
+                    <li>Arcade gameplay progression</li>
+                    <li>Cyberpunk glitch visual style</li>
+                    <li>Solo game development workflow</li>
+                </ul>
+
+                <h3 class="modal-section-title" style="margin-top:4rem;">GALLERY</h3>
+                <div class="modal-gallery-grid">
+                    <div class="gallery-item"
+                         style="background: url('Images/Breach/scene1.png') center/cover;"
+                         data-src="Images/Breach/scene1.png"></div>
+
+                    <div class="gallery-item"
+                         style="background: url('Images/Breach/scene2.png') center/cover;"
+                         data-src="Images/Breach/scene2.png"></div>
+
+                    <div class="gallery-item"
+                         style="background: url('Images/Breach/scene3.png') center/cover;"
+                         data-src="Images/Breach/scene3.png"></div>
+
+                    <div class="gallery-item"
+                         style="background: url('Images/Breach/scene4.png') center/cover;"
+                         data-src="Images/Breach/scene4.png"></div>
+
+                    <div class="gallery-item"
+                         style="background: url('Images/Breach/scene5.png') center/cover;"
+                         data-src="Images/Breach/scene5.png"></div>
+                </div>
+
+            </div>
+
+            <div class="modal-sidebar-col">
+                <h3 class="modal-section-title">PROJECT DETAILS</h3>
+                <ul class="modal-feature-list project-details-list" style="margin-bottom:3rem;">
+                    <li><strong>Role:</strong> Solo Developer</li>
+                    <li><strong>Genre:</strong> Precision Platformer</li>
+                    <li><strong>Engine:</strong> Unity</li>
+                    <li><strong>Type:</strong> Personal Project</li>
+                </ul>
+
+                <h3 class="modal-section-title">FEATURES</h3>
+                <ul class="modal-feature-list" style="margin-bottom:3rem;">
+                    <li>Chained double-jump mechanics</li>
+                    <li>Shell collection economy</li>
+                    <li>Glitch-themed visual style</li>
+                    <li>Precision platforming gameplay</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 Jatin Nakashe. Game Designer.</p>
+    </footer>
+
+    <div class="social-fab">
+        <a href="https://www.linkedin.com/in/jatin-nakashe" target="_blank" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+        </a>
+        <a href="mailto:jatinnakashe@gmail.com" aria-label="Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+        </a>
+    </div>
+
+    <script>
+        function revealPage() {
+            window.isNavigating = false;
+            const transitionEl = document.querySelector('.page-transition');
+            if (transitionEl) {
+                transitionEl.classList.remove('leaving');
+                setTimeout(() => { transitionEl.classList.add('loaded'); }, 100);
+            }
+        }
+        revealPage();
+        window.addEventListener('pageshow', revealPage);
+
+        const lenis = new Lenis({ duration: 1.2, easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), smooth: true });
+        function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
+        requestAnimationFrame(raf);
+        window.onbeforeunload = function () { window.scrollTo(0, 0); };
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const revealElements = document.querySelectorAll(".reveal");
+            if (revealElements.length > 0) {
+                const revealOptions = { threshold: 0.15 };
+                const revealOnScroll = new IntersectionObserver(function(entries, observer) {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) { entry.target.classList.add("active"); observer.unobserve(entry.target); }
+                    });
+                }, revealOptions);
+                revealElements.forEach(el => revealOnScroll.observe(el));
+            }
+        });
+
+        // Modals Logic
+        (function(){
+            const modal = document.getElementById('detail-modal');
+            const modalBody = document.getElementById('detail-modal-body');
+            const closeBtn = modal && modal.querySelector('.detail-modal-close');
+
+            try {
+                document.documentElement.classList.remove('modal-open');
+                document.body.classList.remove('modal-open');
+            } catch (e) { }
+
+            function openModal(contentHtml) {
+                if (!modal) return;
+                modalBody.innerHTML = contentHtml;
+                modal.setAttribute('aria-hidden', 'false');
+                if (typeof lenis !== 'undefined') lenis.stop();
+                document.documentElement.classList.add('modal-open');
+                document.body.classList.add('modal-open');
+                setTimeout(() => closeBtn && closeBtn.focus(), 50);
+            }
+
+            function closeModal() {
+                if (!modal) return;
+                modal.setAttribute('aria-hidden', 'true');
+                if (typeof lenis !== 'undefined') lenis.start();
+                document.documentElement.classList.remove('modal-open');
+                document.body.classList.remove('modal-open');
+                setTimeout(() => { if (modalBody) modalBody.innerHTML = ''; }, 500);
+            }
+
+            document.addEventListener('click', function(e){
+                const btn = e.target.closest && e.target.closest('.view-details-btn');
+                if (!btn) return;
+                const selector = btn.getAttribute('data-detail');
+                if (selector) {
+                    const tpl = document.querySelector(selector);
+                    if (tpl) { openModal(tpl.innerHTML); }
+                }
+            });
+
+            document.addEventListener('click', function(e){
+                if (!modal) return;
+                if (e.target.matches('[data-close]') || e.target.closest('.detail-modal-close')) { closeModal(); }
+            });
+
+            window.addEventListener('keydown', function(e){ if (e.key === 'Escape') closeModal(); });
+            window.openDetailModal = openModal;
+            window.closeDetailModal = closeModal;
+        })();
+
+        // Clean Hash Logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const hash = window.location.hash;
+            if (hash && hash.length > 1) {
+                try {
+                    const tpl = document.querySelector(hash);
+                    if (tpl && window.openDetailModal) {
+                        setTimeout(() => {
+                            window.openDetailModal(tpl.innerHTML);
+                            window.history.replaceState(null, null, window.location.pathname);
+                        }, 80);
+                    }
+                } catch (e) { }
+            }
+        });
+
+        // Page Transitions
+        document.addEventListener('click', function(e) {
+            const link = e.target.closest('a');
+            if (!link) return;
+            const targetUrl = link.getAttribute('href');
+            if (!targetUrl || targetUrl === '#') return;
+            
+            if (link.getAttribute('target') === '_blank') return;
+            
+            if (link.classList.contains('nav-logo') && targetUrl === '#hero-screen') { e.preventDefault(); lenis.scrollTo(0); return; }
+            if (targetUrl.startsWith('#')) { e.preventDefault(); lenis.scrollTo(targetUrl, { offset: -50 }); return; }
+            if (targetUrl.startsWith('mailto:') || targetUrl.startsWith('http')) return; 
+            
+            e.preventDefault();
+            if (window.isNavigating) return;
+            window.isNavigating = true;
+            const transitionEl = document.querySelector('.page-transition');
+            if (transitionEl) {
+                transitionEl.classList.remove('loaded');
+                transitionEl.classList.add('leaving');
+                setTimeout(() => {
+                    window.location.href = targetUrl;
+                    setTimeout(() => { if (window.isNavigating) revealPage(); }, 1500);
+                }, 850);
+            } else { window.location.href = targetUrl; }
+        });
+
+        // Lightbox Logic
+        (function() {
+            const lightbox = document.getElementById('gallery-lightbox');
+            if (!lightbox) return;
+            const wrapper = document.getElementById('lightbox-content-wrapper');
+            const btnClose = lightbox.querySelector('.lightbox-close');
+            const btnPrev = lightbox.querySelector('.lightbox-prev');
+            const btnNext = lightbox.querySelector('.lightbox-next');
+            let currentGallery = [];
+            let currentIndex = 0;
+
+            document.addEventListener('click', function(e) {
+                const item = e.target.closest('.gallery-item');
+                if (!item) return;
+                const modalBody = document.getElementById('detail-modal-body');
+                if (!modalBody) return;
+                const items = Array.from(modalBody.querySelectorAll('.gallery-item'));
+                if (items.length > 0) {
+                    currentGallery = items;
+                    currentIndex = items.indexOf(item);
+                    updateLightboxMedia();
+                    lightbox.setAttribute('aria-hidden', 'false');
+                }
+            });
+
+            function updateLightboxMedia() {
+                if (currentGallery.length === 0) return;
+                const item = currentGallery[currentIndex];
+                wrapper.innerHTML = ''; 
+                let src = item.getAttribute('data-src');
+                let type = item.getAttribute('data-type') || 'image'; 
+                if (!src) {
+                    const bg = item.style.backgroundImage || item.style.background;
+                    if (bg && bg.includes('url(')) { src = bg.match(/url\(["']?([^"']*)["']?\)/)[1]; } 
+                    else { wrapper.innerHTML = `<div class="lightbox-placeholder" style="background: ${item.style.background}">Add data-src="" to view real media</div>`; return; }
+                }
+                if (type === 'video') {
+                    const vid = document.createElement('video');
+                    vid.src = src; vid.controls = true; vid.autoplay = true; vid.classList.add('lightbox-media');
+                    wrapper.appendChild(vid);
+                } else {
+                    const img = document.createElement('img');
+                    img.src = src; img.classList.add('lightbox-media'); wrapper.appendChild(img);
+                }
+            }
+
+            function closeLightbox() {
+                lightbox.setAttribute('aria-hidden', 'true');
+                setTimeout(() => { wrapper.innerHTML = ''; }, 300);
+            }
+
+            function showNext() { if (currentGallery.length === 0) return; currentIndex = (currentIndex + 1) % currentGallery.length; updateLightboxMedia(); }
+            function showPrev() { if (currentGallery.length === 0) return; currentIndex = (currentIndex - 1 + currentGallery.length) % currentGallery.length; updateLightboxMedia(); }
+
+            btnClose.addEventListener('click', closeLightbox);
+            btnNext.addEventListener('click', showNext);
+            btnPrev.addEventListener('click', showPrev);
+
+            lightbox.addEventListener('click', function(e) { if (e.target === lightbox || e.target === wrapper) closeLightbox(); });
+
+            window.addEventListener('keydown', function(e) {
+                if (lightbox.getAttribute('aria-hidden') === 'false') {
+                    if (e.key === 'Escape') closeLightbox();
+                    if (e.key === 'ArrowRight') showNext();
+                    if (e.key === 'ArrowLeft') showPrev();
+                }
+            });
+        })();
+
+        // VFX Video Carousel Logic (Moved from Inline)
+        document.addEventListener("DOMContentLoaded", function() {
+            const carousels = document.querySelectorAll('.vfx-carousel');
+            carousels.forEach(carousel => {
+                if(carousel.dataset.initialized) return; 
+                carousel.dataset.initialized = "true";
+                
+                const slides = carousel.querySelectorAll('.vfx-slide');
+                const btnPrev = carousel.querySelector('.vfx-prev');
+                const btnNext = carousel.querySelector('.vfx-next');
+                let current = 0;
+
+                function updateSlides() {
+                    slides.forEach((slide, index) => {
+                        if (index === current) {
+                            slide.style.opacity = '1';
+                            slide.style.zIndex = '2';
+                        } else {
+                            slide.style.opacity = '0';
+                            slide.style.zIndex = '1';
+                        }
+                    });
+                }
+
+                btnPrev.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    current = (current - 1 + slides.length) % slides.length;
+                    updateSlides();
+                });
+
+                btnNext.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    current = (current + 1) % slides.length;
+                    updateSlides();
+                });
+
+                [btnPrev, btnNext].forEach(btn => {
+                    btn.addEventListener('mouseenter', () => {
+                        btn.style.background = 'var(--accent-color)';
+                        btn.style.color = '#000';
+                        btn.style.borderColor = 'var(--accent-color)';
+                        btn.style.transform = 'translateY(-50%) scale(1.1)';
+                        btn.style.boxShadow = '0 0 15px rgba(0, 255, 204, 0.4)';
+                    });
+                    btn.addEventListener('mouseleave', () => {
+                        btn.style.background = 'rgba(0,0,0,0.6)';
+                        btn.style.color = 'white';
+                        btn.style.borderColor = 'rgba(255,255,255,0.2)';
+                        btn.style.transform = 'translateY(-50%) scale(1)';
+                        btn.style.boxShadow = 'none';
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>

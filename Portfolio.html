@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Jatin Nakashe</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+</head>
+<body>
+
+    <div class="page-transition">
+        <div class="swipe-layer cyan-layer"></div>
+        <div class="swipe-layer dark-layer"></div>
+    </div>
+
+    <div class="global-video-bg">
+        <video autoplay muted loop playsinline id="bg-video">
+            <source src="background.mp4" type="video/mp4">
+        </video>
+        <div class="video-overlay"></div>
+    </div>
+
+    <nav class="top-nav">
+        <a href="index.html" class="nav-logo">Jatin Nakashe</a>
+        <div class="nav-links">
+            <a href="index.html#about">About</a>
+            <a href="index.html#backstory">Background</a>
+            <a href="index.html#experience">Work</a>
+            <a href="index.html#skills">Skills</a>
+        </div>
+        <a href="#" class="nav-cta active">Portfolio</a>
+    </nav>
+
+    <div class="vertical-side-title">PORTFOLIO</div>
+
+    <main id="main-content" style="margin-top: 15vh; min-height: 80vh; padding: 0 5%; position: relative; z-index: 10;">
+        
+        <div style="text-align: center; margin-bottom: 3rem; padding: 2rem 0;">
+            <p style="color: var(--text-secondary); font-size: 1.272rem; max-width: 600px; margin: 0 auto;">
+                Select a category below to explore my detailed galleries, design documents, and gameplay breakdowns.
+            </p>
+        </div>
+
+        <div class="portfolio-grid">
+            
+            <a href="Commercial.html" class="exp-card reveal delay-1" style="text-decoration: none;">
+                <div class="exp-image" style="background: url('Images/commercial-bg.jpg') center/cover no-repeat;"></div>
+                <div class="exp-overlay">
+                    <div class="exp-content">
+                        <h4>Commercial Games</h4>
+                        <p class="exp-subtext">13 Projects</p>
+                    </div>
+                </div>
+            </a>
+
+         <a href="Personal.html" class="exp-card reveal delay-2" style="text-decoration: none;">
+                <div class="exp-image" style="background: url('Images/personal-bg.jpg') center/cover no-repeat;"></div>
+                <div class="exp-overlay">
+                    <div class="exp-content">
+                        <h4>Personal Projects</h4>
+                        <p class="exp-subtext">10+ Projects</p>
+                    </div>
+                </div>
+            </a>
+
+          <a href="Ideas.html" class="exp-card reveal delay-3" style="text-decoration: none;">
+                    <div class="exp-image" style="background: url('Images/ideas-bg.jpg') center/cover no-repeat;"></div>
+                    <div class="exp-overlay">
+                        <div class="exp-content">
+                            <h4>Design Ideas</h4>
+                            <p class="exp-subtext">20+ Concepts</p>
+                        </div>
+                    </div>
+                </a>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2026 Jatin Nakashe. Game Designer.</p>
+    </footer>
+
+    <div class="social-fab">
+        <a href="https://www.linkedin.com/in/jatin-nakashe" target="_blank" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+        </a>
+       
+        <a href="mailto:jatinnakashe@gmail.com" aria-label="Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+        </a>
+    </div>
+
+    <script>
+        function revealPage() {
+            window.isNavigating = false;
+            const transitionEl = document.querySelector('.page-transition');
+            if (transitionEl) {
+                transitionEl.classList.remove('leaving');
+                setTimeout(() => { transitionEl.classList.add('loaded'); }, 100);
+            }
+        }
+        revealPage(); 
+        window.addEventListener('pageshow', revealPage);
+
+        const lenis = new Lenis({ duration: 1.2, easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), smooth: true });
+        function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
+        requestAnimationFrame(raf);
+        window.onbeforeunload = function () { window.scrollTo(0, 0); };
+
+        const heroElement = document.getElementById("scramble-text");
+        const expElement = document.getElementById("scramble-exp");
+        if (heroElement && expElement) {
+            const heroWords = ["Game", "Economy", "System", "Character", "Technical"];
+            const expWords = ["Experience", "Work"]; 
+            let currentIndex = 0;
+            const chars = "ABCDEFGHJKLNPQRSTUVXYZ0123456789#&*"; 
+            function scrambleWord(element, target) {
+                let iteration = 0;
+                const currentText = element.innerText;
+                const maxLength = Math.min(10, Math.max(currentText.length, target.length));
+                let interval = setInterval(() => {
+                    let scrambled = "";
+                    for (let i = 0; i < maxLength; i++) {
+                        if (i < iteration) { scrambled += target[i] || ""; } 
+                        else { scrambled += chars[Math.floor(Math.random() * chars.length)]; }
+                    }
+                    element.innerText = scrambled;
+                    if (iteration >= maxLength) { clearInterval(interval); element.innerText = target; }
+                    iteration += 0.6; 
+                }, 60); 
+            }
+            setTimeout(() => { setInterval(() => { currentIndex++; scrambleWord(heroElement, heroWords[currentIndex % heroWords.length]); scrambleWord(expElement, expWords[currentIndex % expWords.length]); }, 2500); }, 3500);
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const scrollDown = document.querySelector('.scroll-down');
+            const heroScreen = document.getElementById('hero-screen');
+            window.addEventListener('scroll', () => {
+                let scrollY = window.scrollY;
+                if (scrollDown) { scrollDown.style.opacity = scrollY > 100 ? "0" : "1"; scrollDown.style.pointerEvents = scrollY > 100 ? "none" : "auto"; }
+                if (heroScreen) {
+                    let startFade = window.innerHeight * 0.4; let endFade = window.innerHeight * 0.8; let opacity = 1; 
+                    if (scrollY > startFade) opacity = 1 - ((scrollY - startFade) / (endFade - startFade));
+                    if (opacity <= 0) { heroScreen.style.opacity = "0"; heroScreen.style.visibility = "hidden"; } 
+                    else { heroScreen.style.opacity = opacity.toString(); heroScreen.style.visibility = "visible"; }
+                }
+            });
+            const revealElements = document.querySelectorAll(".reveal");
+            if (revealElements.length > 0) {
+                const revealOptions = { threshold: 0.15 };
+                const revealOnScroll = new IntersectionObserver(function(entries, observer) {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) { entry.target.classList.add("active"); observer.unobserve(entry.target); }
+                    });
+                }, revealOptions);
+                revealElements.forEach(el => revealOnScroll.observe(el));
+            }
+        });
+
+        document.addEventListener('click', function(e) {
+            const link = e.target.closest('a');
+            if (!link) return;
+            const targetUrl = link.getAttribute('href');
+            if (!targetUrl || targetUrl === '#') return;
+            if (link.classList.contains('nav-logo') && targetUrl === '#hero-screen') { e.preventDefault(); lenis.scrollTo(0); return; }
+            if (targetUrl.startsWith('#')) { e.preventDefault(); lenis.scrollTo(targetUrl, { offset: -50 }); return; }
+            if (targetUrl.startsWith('mailto:') || targetUrl.startsWith('http')) return; 
+            
+            e.preventDefault();
+            if (window.isNavigating) return;
+            window.isNavigating = true;
+            const transitionEl = document.querySelector('.page-transition');
+            if (transitionEl) {
+                transitionEl.classList.remove('loaded');
+                transitionEl.classList.add('leaving');
+                setTimeout(() => {
+                    window.location.href = targetUrl;
+                    setTimeout(() => { if (window.isNavigating) revealPage(); }, 1500);
+                }, 850);
+            } else { window.location.href = targetUrl; }
+        });
+    </script>
+</body>
+</html>

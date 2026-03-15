@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Ideas | Jatin Nakashe</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+</head>
+<body>
+
+    <div class="page-transition">
+        <div class="swipe-layer cyan-layer"></div>
+        <div class="swipe-layer dark-layer"></div>
+    </div>
+
+    <div class="global-video-bg">
+        <video autoplay muted loop playsinline id="bg-video">
+            <source src="Videos/background.mp4" type="video/mp4">
+        </video>
+        <div class="video-overlay"></div>
+    </div>
+
+    <nav class="top-nav">
+        <a href="index.html" class="nav-logo">Jatin Nakashe</a>
+        <div class="nav-links">
+            <a href="index.html#about">About</a>
+            <a href="index.html#backstory">Background</a>
+            <a href="index.html#experience">Work</a>
+            <a href="index.html#skills">Skills</a>
+        </div>
+        <a href="Portfolio.html" class="nav-cta active">Portfolio</a>
+    </nav>
+
+    <div class="vertical-side-title">IDEAS</div>
+
+    <main id="main-content" style="margin-top: 73px; min-height: 80vh; padding: 0 5%; position: relative; z-index: 10;">
+        
+        <div class="backstory-header">
+            <h2 style="color: var(--accent-color); font-size: 4.236rem; line-height: 1.1; margin: 0; text-transform: uppercase;">Concepts & Docs</h2>
+        </div>
+
+        <div class="accordion-container">
+            
+            <div class="accordion-item reveal delay-1 expanded">
+                <button class="accordion-header">
+                    <h3>Design Documents (GDD)</h3>
+                    <span class="accordion-icon">+</span>
+                </button>
+                <div class="accordion-content">
+                    <div class="accordion-inner">
+                        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Comprehensive Game Design Documents detailing mechanics, economy loops, and technical requirements.</p>
+                        
+                        <div class="document-grid">
+                            <div class="doc-card" style="border-color: var(--accent-color); box-shadow: 0 0 15px rgba(0, 255, 204, 0.15);">
+                                <h4>Project: Valen GDD</h4>
+                                <p>A massive 56-page Game Design Document for a dark cyberpunk hack-and-slash adventure, featuring insect-themed factions, temporal mechanics, and deep lore.</p>
+                                <a href="Docs/Project Valen Design Document.pdf" target="_blank" class="btn-outline">Read Document</a>
+                            </div>
+
+                            <div class="doc-card">
+                                <h4>Roguefire GDD</h4>
+                                <p>A complete design document for a roguelike action game, detailing room-by-room combat, dynamic skill pools, and complex enemy synergies.</p>
+                                <a href="Docs/Roguefire Design Document.pdf" target="_blank" class="btn-outline">Read Document</a>
+                            </div>
+                            
+                            <div class="doc-card">
+                                <h4>The Silent Floor GDD</h4>
+                                <p>A psychological horror design document focusing on spatial looping, environmental manipulation, and a deep narrative mystery inside a surreal hotel.</p>
+                                <a href="Docs/The Silent Floor _ Room 309 Design Document.docx.pdf" target="_blank" class="btn-outline">Read Document</a>
+                            </div>
+                            
+                            <div class="doc-card">
+                                <h4>Hidden Objects GDD</h4>
+                                <p>A comprehensive system design document detailing core hidden object loops, forensic mechanics, dynamic level variants, and scoring systems.</p>
+                                <a href="Docs/Chhota Bheem_ Hidden Objects Design Document.docx.pdf" target="_blank" class="btn-outline">Read Document</a>
+                            </div>
+                            
+                            <div class="doc-card">
+                                <h4>Cooking Mania GDD</h4>
+                                <p>A detailed game design document outlining time-management mechanics, progression formulas, and deep economy balancing for a restaurant arcade game.</p>
+                                <a href="Docs/Chhota Bheem_ Cooking Mania Design Document.docx.pdf" target="_blank" class="btn-outline">Read Document</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item reveal delay-2">
+                <button class="accordion-header">
+                    <h3>Design Ideas & Pitches</h3>
+                    <span class="accordion-icon">+</span>
+                </button>
+                <div class="accordion-content">
+                    <div class="accordion-inner">
+                        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Novel concepts, gameplay prototypes, and elevator pitches for future development.</p>
+                        
+                        <div class="document-grid">
+                            
+                            <div class="doc-card">
+                                <h4>10 Minutes Ahead</h4>
+                                <p>A stealth-strategy game where you experience events 10 minutes before they occur, giving you the chance to strategically prevent or manipulate them.</p>
+                                <a href="Docs/10 Minutes Ahead.pdf" target="_blank" class="btn-outline">Read Pitch</a>
+                            </div>
+
+                            <div class="doc-card">
+                                <h4>Reverse Heist</h4>
+                                <p>A stealth-action game that inverts the traditional heist, tasking players to infiltrate highly secured locations to quietly return dangerous, cursed artifacts.</p>
+                                <a href="Docs/Reverse Heist.pdf" target="_blank" class="btn-outline">Read Pitch</a>
+                            </div>
+
+                            <div class="doc-card">
+                                <h4>Shadow Match</h4>
+                                <p>A relaxing 3D puzzle game where players solve visual challenges by freely rotating and aligning abstract objects to perfectly match a target shadow silhouette.</p>
+                                <a href="Docs/Shadow Match.pdf" target="_blank" class="btn-outline">Read Pitch</a>
+                            </div>
+
+                            <div class="doc-card">
+                                <h4>Power Debt</h4>
+                                <p>An action roguelite where every overpowered hack 'n' slash ability you use is free upfront—but creates a chaotic "debt" that the world will unpredictably collect later.</p>
+                                <a href="Docs/Power Debt.pdf" target="_blank" class="btn-outline">Read Pitch</a>
+                            </div>
+
+                            <div class="doc-card">
+                                <h4>Museum of Lives</h4>
+                                <p>A narrative adventure where you wake up inside a museum of unfinished lives, reconstructing broken memories before realizing you might be an exhibit yourself.</p>
+                                <a href="Docs/MUSEUM OF LIVES.pdf" target="_blank" class="btn-outline">Read Pitch</a>
+                            </div>
+
+                            <div class="doc-card">
+                                <h4>Quiet Sea</h4>
+                                <p>A deep-sea narrative mystery where an isolated communication engineer must repair an abandoned station that is secretly receiving signals from the future.</p>
+                                <a href="Docs/Quiet Sea.pdf" target="_blank" class="btn-outline">Read Pitch</a>
+                            </div>
+
+                            <div class="doc-card">
+                                <h4>Different Physics</h4>
+                                <p>A chaotic party platformer where everyone is playing the same game, but every player follows a completely different set of randomized physics rules.</p>
+                                <a href="Docs/Different Physics Multiplayer.pdf" target="_blank" class="btn-outline">Read Pitch</a>
+                            </div>
+
+                            <div class="doc-card">
+                                <h4>Background Character</h4>
+                                <p>A choice-driven narrative adventure where you are an ordinary NPC. Your small, mundane actions quietly create butterfly effects that change how the hero's grand quest ends.</p>
+                                <a href="Docs/Background Character.pdf" target="_blank" class="btn-outline">Read Pitch</a>
+                            </div>
+
+                            <div class="doc-card">
+                                <h4>Time Bankruptcy</h4>
+                                <p>An action roguelite where you wield devastating temporal abilities, but every attack or dodge physically ages you and burns through your own limited lifespan.</p>
+                                <a href="Docs/Time Bankruptcy.pdf" target="_blank" class="btn-outline">Read Pitch</a>
+                            </div>
+
+                            <div class="doc-card">
+                                <h4>Sin Hunter</h4>
+                                <p>A hack 'n' slash adventure where you hunt the living embodiments of the Seven Deadly Sins, choosing to either purify their corrupting power or wield it yourself.</p>
+                                <a href="Docs/Sin Hunter.pdf" target="_blank" class="btn-outline">Read Pitch</a>
+                            </div>
+
+                            <div class="doc-card">
+                                <h4>The Man Who Can Pause The World</h4>
+                                <p>A supernatural thriller where you can freeze time, but the temporal entity that gave you this power is secretly learning how to enter reality through you.</p>
+                                <a href="Docs/The Man Who Can Pause The World.pdf" target="_blank" class="btn-outline">Read Pitch</a>
+                            </div>
+
+                            <div class="doc-card">
+                                <h4>The Reverse War</h4>
+                                <p>A mind-bending sci-fi thriller where you fight a hidden war across forward and reversed timelines, coordinating actions from opposite directions in time.</p>
+                                <a href="Docs/The Reverse War.pdf" target="_blank" class="btn-outline">Read Pitch</a>
+                            </div>
+
+                            <div class="doc-card">
+                                <h4>The Dream Invasion</h4>
+                                <p>An action-adventure where humanity's worst nightmares physically manifest in the real world, forcing you to use unstable supernatural powers to fight back.</p>
+                                <a href="Docs/THE DREAM INVASION.pdf" target="_blank" class="btn-outline">Read Pitch</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2026 Jatin Nakashe. Game Designer.</p>
+    </footer>
+
+    <div class="social-fab">
+        <a href="https://www.linkedin.com/in/jatin-nakashe" target="_blank" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+        </a>
+        
+        <a href="mailto:jatinnakashe@gmail.com" aria-label="Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+        </a>
+    </div>
+
+    <script>
+        // Page Reveal Transition
+        function revealPage() {
+            window.isNavigating = false;
+            const transitionEl = document.querySelector('.page-transition');
+            if (transitionEl) {
+                transitionEl.classList.remove('leaving');
+                setTimeout(() => { transitionEl.classList.add('loaded'); }, 100);
+            }
+        }
+        revealPage();
+        window.addEventListener('pageshow', revealPage);
+
+        // Lenis Smooth Scrolling
+        const lenis = new Lenis({ duration: 1.2, easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), smooth: true });
+        function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
+        requestAnimationFrame(raf);
+        window.onbeforeunload = function () { window.scrollTo(0, 0); };
+
+        // Scroll Animations
+        document.addEventListener("DOMContentLoaded", function() {
+            const revealElements = document.querySelectorAll(".reveal");
+            if (revealElements.length > 0) {
+                const revealOptions = { threshold: 0.15 };
+                const revealOnScroll = new IntersectionObserver(function(entries, observer) {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) { entry.target.classList.add("active"); observer.unobserve(entry.target); }
+                    });
+                }, revealOptions);
+                revealElements.forEach(el => revealOnScroll.observe(el));
+            }
+        });
+
+        // ==========================================
+        // ACCORDION LOGIC (FIXED)
+        // ==========================================
+        document.addEventListener('DOMContentLoaded', () => {
+            const accordions = document.querySelectorAll('.accordion-item');
+            
+            accordions.forEach(acc => {
+                const header = acc.querySelector('.accordion-header');
+                header.addEventListener('click', () => {
+                    acc.classList.toggle('expanded');
+                });
+            });
+        });
+
+       // Page Transitions & Router
+        document.addEventListener('click', function(e) {
+            const link = e.target.closest('a');
+            if (!link) return;
+            
+            if (link.getAttribute('target') === '_blank') {
+                return; 
+            }
+
+            const targetUrl = link.getAttribute('href');
+            if (!targetUrl || targetUrl === '#') return;
+            if (link.classList.contains('nav-logo') && targetUrl === '#hero-screen') { e.preventDefault(); lenis.scrollTo(0); return; }
+            if (targetUrl.startsWith('#')) { e.preventDefault(); lenis.scrollTo(targetUrl, { offset: -50 }); return; }
+            if (targetUrl.startsWith('mailto:') || targetUrl.startsWith('http')) return; 
+            
+            e.preventDefault();
+            if (window.isNavigating) return;
+            window.isNavigating = true;
+            const transitionEl = document.querySelector('.page-transition');
+            if (transitionEl) {
+                transitionEl.classList.remove('loaded');
+                transitionEl.classList.add('leaving');
+                setTimeout(() => {
+                    window.location.href = targetUrl;
+                    setTimeout(() => { if (window.isNavigating) revealPage(); }, 1500);
+                }, 850);
+            } else { window.location.href = targetUrl; }
+        });
+    </script>
+</body>
+</html>
