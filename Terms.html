@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service - BREACH | Jatin Nakashe</title>
+    
+    <link rel="icon" type="image/png" href="Images/favicon.png">
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+    
+    <style>
+        .privacy-content h3 {
+            color: #ffffff;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        .privacy-content p {
+            color: #cccccc;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+        .privacy-content ul {
+            color: #cccccc;
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+        .privacy-content li {
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page-transition">
+        <div class="swipe-layer cyan-layer"></div>
+        <div class="swipe-layer dark-layer"></div>
+    </div>
+
+    <div class="global-video-bg">
+        <video autoplay muted loop playsinline id="bg-video">
+            <source src="Videos/background.mp4" type="video/mp4">
+        </video>
+        <div class="video-overlay"></div>
+    </div>
+
+    <main id="main-content" style="margin-top: 40px; min-height: 80vh; padding: 0 5%; position: relative; z-index: 10; max-width: 900px; margin-left: auto; margin-right: auto;">
+        
+        <div class="backstory-header">
+            <h2 style="color: var(--accent-color); font-size: 3rem; line-height: 1.1; margin: 0; text-transform: uppercase;">Terms of Service</h2>
+            <p style="color: var(--text-secondary); margin-top: 1rem; font-size: 1.2rem;">Last Updated: October 2026</p>
+        </div>
+
+        <div class="privacy-content" style="background: rgba(21, 22, 26, 0.85); backdrop-filter: blur(10px); padding: 3rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.05); margin-top: 2rem; margin-bottom: 4rem;">
+            
+            <p>By downloading or playing <strong>BREACH</strong> ("the Game"), made by <strong>G Squad Studio</strong> ("we", "us"), you agree to these terms. If you do not agree, do not use the Game.</p>
+
+            <h3>1. License</h3>
+            <p>We give you a personal, non-exclusive, non-transferable, revocable license to install and play the Game on your device for personal, non-commercial use.</p>
+
+            <h3>2. Restrictions</h3>
+            <p>You may not copy, modify, reverse engineer, decompile, or resell the Game; use cheats, bots, or tools to tamper with the Game or its save data; or interfere with the Game's services or Google Play Games.</p>
+
+            <h3>3. Ownership</h3>
+            <p>The Game, including its code, art, music, and design, belongs to G Squad Studio and its licensors and is protected by copyright and other laws.</p>
+
+            <h3>4. Google Play Games and Progress</h3>
+            <p>Signing in is optional. Progress saved through your Google account depends on Google's services; we are not responsible for lost progress caused by those services, your device, or deleting the Game or saved data. Hints and progress have no cash value.</p>
+
+            <h3>5. Ads</h3>
+            <p>The Game shows optional rewarded ads. Watching an ad is voluntary and rewards you with in-game hints. Ads are provided by third parties, and we are not responsible for their content.</p>
+
+            <h3>6. Third-Party Services</h3>
+            <p>The Game uses third-party services (Google Play, Google Play Games, Firebase, Unity LevelPlay). Their terms and privacy policies apply to your use of them.</p>
+
+            <h3>7. Updates and Availability</h3>
+            <p>We may update, change, suspend, or discontinue the Game or any feature at any time.</p>
+
+            <h3>8. Disclaimer</h3>
+            <p>The Game is provided "as is" without warranties of any kind, to the extent permitted by law. We do not guarantee it will be error-free or uninterrupted.</p>
+
+            <h3>9. Limitation of Liability</h3>
+            <p>To the extent permitted by law, G Squad Studio is not liable for indirect, incidental, or consequential damages, or for loss of data or progress, arising from your use of the Game. Our total liability is limited to the amount you paid for the Game, if any.</p>
+
+            <h3>10. Termination</h3>
+            <p>We may end your access if you break these terms. You may stop using the Game at any time by uninstalling it.</p>
+
+            <h3>11. Changes</h3>
+            <p>We may update these terms. Continued use after a change means you accept them.</p>
+
+            <h3>12. Governing Law</h3>
+            <p>These terms are governed by the laws of India. Disputes go to the courts of India, unless your local consumer law says otherwise.</p>
+
+            <h3>13. Contact Us</h3>
+            <p><strong>Email:</strong> jatinnakashe@gmail.com</p>
+            <p><strong>Company:</strong> G Squad Studio</p>
+            <p>See also our <a href="Privacy.html" style="color: var(--accent-color);">Privacy Policy</a>.</p>
+
+        </div>
+        
+    </main>
+
+    <footer>
+        
+    </footer>
+
+    <script>
+        // Page Reveal Transition
+        function revealPage() {
+            window.isNavigating = false;
+            const transitionEl = document.querySelector('.page-transition');
+            if (transitionEl) {
+                transitionEl.classList.remove('leaving');
+                setTimeout(() => { transitionEl.classList.add('loaded'); }, 100);
+            }
+        }
+        revealPage();
+        window.addEventListener('pageshow', revealPage);
+
+        // Lenis Smooth Scrolling
+        const lenis = new Lenis({ duration: 1.2, easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), smooth: true });
+        function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
+        requestAnimationFrame(raf);
+        window.onbeforeunload = function () { window.scrollTo(0, 0); };
+
+        // Page Transitions & Router
+        document.addEventListener('click', function(e) {
+            const link = e.target.closest('a');
+            if (!link) return;
+            
+            if (link.getAttribute('target') === '_blank' || link.hasAttribute('download')) {
+                return; 
+            }
+
+            const targetUrl = link.getAttribute('href');
+            if (!targetUrl || targetUrl === '#') return;
+            if (link.classList.contains('nav-logo') && targetUrl === '#hero-screen') { e.preventDefault(); lenis.scrollTo(0); return; }
+            if (targetUrl.startsWith('#')) { e.preventDefault(); lenis.scrollTo(targetUrl, { offset: -50 }); return; }
+            if (targetUrl.startsWith('mailto:') || targetUrl.startsWith('http')) return; 
+            
+            e.preventDefault();
+            if (window.isNavigating) return;
+            window.isNavigating = true;
+            const transitionEl = document.querySelector('.page-transition');
+            if (transitionEl) {
+                transitionEl.classList.remove('loaded');
+                transitionEl.classList.add('leaving');
+                setTimeout(() => {
+                    window.location.href = targetUrl;
+                    setTimeout(() => { if (window.isNavigating) revealPage(); }, 1500);
+                }, 850);
+            } else { window.location.href = targetUrl; }
+        });
+    </script>
+</body>
+</html>
