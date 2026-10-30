@@ -4,9 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Design Ideas | Jatin Nakashe</title>
-    <link rel="icon" type="image/png" href="Images/favicon.png">
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&display=swap" rel="stylesheet">
+    <meta name="description" content="Game design documents and original game pitches by Jatin Nakashe.">
+    <meta name="theme-color" content="#0d0c0b">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="Images/favicon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="site.css">
     <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
 
     <!-- Google tag (gtag.js) -->
@@ -19,285 +25,243 @@
   gtag('config', 'G-4GN5QG210P');
 </script>
 
-
 </head>
 <body>
 
-    <div class="page-transition">
-        <div class="swipe-layer cyan-layer"></div>
-        <div class="swipe-layer dark-layer"></div>
-    </div>
+    <div class="curtain enter" aria-hidden="true"></div>
+    <div class="progress" aria-hidden="true"></div>
+    <div class="cursor" aria-hidden="true"></div>
+    <div class="cursor-ring" aria-hidden="true">View</div>
 
-    <div class="global-video-bg">
-        <video autoplay muted loop playsinline id="bg-video">
-            <source src="Videos/background.mp4" type="video/mp4">
-        </video>
-        <div class="video-overlay"></div>
-    </div>
+    <header class="nav" id="nav">
+        <a href="index.html" class="nav-name intro">Jatin Nakashe</a>
+        <nav class="nav-links intro" aria-label="Primary" style="--d:100ms">
+            <a href="index.html">Home</a>
+            <a href="index.html#contact" class="nav-contact">Contact</a>
+            <a href="Portfolio.html" class="nav-portfolio" data-magnetic><span class="roll"><span>Portfolio</span></span></a>
+            <a href="Jatin_Nakashe-Resume.pdf" download="Jatin_Nakashe_Resume.pdf" class="nav-resume" data-magnetic><span class="roll"><span>Résumé</span></span><span class="nav-ico" aria-hidden="true">↓</span></a>
+        </nav>
+    </header>
 
-    <nav class="top-nav">
-        <a href="index.html" class="nav-logo">Jatin Nakashe</a>
-        <div class="nav-links">
-            <a href="index.html#about">About</a>
-            <a href="index.html#backstory">Background</a>
-            <a href="index.html#experience">Work</a>
-            <a href="index.html#skills">Skills</a>
-        </div>
+    <main id="top">
 
-        <div style="display: flex; gap: 1rem; align-items: center;">
-        <a href="Portfolio.html" class="nav-cta active">Portfolio</a>
-
-        <a href="Jatin_Nakashe-Resume.pdf" download="Jatin_Nakashe_Resume.pdf" class="resume-download-btn">
-                <svg class="download-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                    <polyline points="7 10 12 15 17 10"></polyline>
-                    <line x1="12" y1="15" x2="12" y2="3"></line>
-                </svg>
-                <span class="download-text">Resume</span>
-            </a>
-        </div>
-    </nav>
-
-    <div class="vertical-side-title">IDEAS</div>
-
-    <main id="main-content" style="margin-top: 73px; min-height: 80vh; padding: 0 5%; position: relative; z-index: 10;">
-        
-        <div class="backstory-header">
-            <h2 style="color: var(--accent-color); font-size: 4.236rem; line-height: 1.1; margin: 0; text-transform: uppercase;">Concepts & Docs</h2>
-        </div>
-
-        <div class="accordion-container">
-            
-            <div class="accordion-item reveal delay-1 expanded">
-                <button class="accordion-header">
-                    <h3>Design Documents (GDD)</h3>
-                    <span class="accordion-icon">+</span>
-                </button>
-                <div class="accordion-content">
-                    <div class="accordion-inner">
-                        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Comprehensive Game Design Documents detailing mechanics, economy loops, and technical requirements.</p>
-                        
-                        <div class="document-grid">
-                            <div class="doc-card" style="border-color: var(--accent-color); box-shadow: 0 0 15px rgba(0, 255, 204, 0.15);">
-                                <h4>Project: Valen GDD</h4>
-                                <p>A massive 56-page Game Design Document for a dark cyberpunk hack-and-slash adventure, featuring insect-themed factions, temporal mechanics, and deep lore.</p>
-                                <a href="Docs/Project Valen Design Document.pdf" target="_blank" class="btn-outline">Read Document</a>
-                            </div>
-
-                            <div class="doc-card">
-                                <h4>Roguefire GDD</h4>
-                                <p>A complete design document for a roguelike action game, detailing room-by-room combat, dynamic skill pools, and complex enemy synergies.</p>
-                                <a href="Docs/Roguefire Design Document.pdf" target="_blank" class="btn-outline">Read Document</a>
-                            </div>
-                            
-                            <div class="doc-card">
-                                <h4>The Silent Floor GDD</h4>
-                                <p>A psychological horror design document focusing on spatial looping, environmental manipulation, and a deep narrative mystery inside a surreal hotel.</p>
-                                <a href="Docs/The Silent Floor _ Room 309 Design Document.docx.pdf" target="_blank" class="btn-outline">Read Document</a>
-                            </div>
-                            
-                            <div class="doc-card">
-                                <h4>Hidden Objects GDD</h4>
-                                <p>A comprehensive system design document detailing core hidden object loops, forensic mechanics, dynamic level variants, and scoring systems.</p>
-                                <a href="Docs/Chhota Bheem_ Hidden Objects Design Document.docx.pdf" target="_blank" class="btn-outline">Read Document</a>
-                            </div>
-                            
-                            <div class="doc-card">
-                                <h4>Cooking Mania GDD</h4>
-                                <p>A detailed game design document outlining time-management mechanics, progression formulas, and deep economy balancing for a restaurant arcade game.</p>
-                                <a href="Docs/Chhota Bheem_ Cooking Mania Design Document.docx.pdf" target="_blank" class="btn-outline">Read Document</a>
-                            </div>
-                        </div>
-                    </div>
+        <section class="page-head glow">
+            <p class="eyebrow crumbs intro" style="--d:200ms"><a href="Portfolio.html">Portfolio</a> <span>/</span> <span class="idx">Ideas</span></p>
+            <h1 class="hero-title page-title split">Design <em>ideas</em></h1>
+            <div class="page-foot intro" style="--d:600ms">
+                <p class="hero-intro">Full game design documents and original pitches: mechanics, economy loops, narrative hooks and the systems behind them. Every one opens as a PDF.</p>
+                <div class="stats">
+                    <div class="stat"><span class="stat-num" data-count="5">0</span><span class="eyebrow">Design documents</span></div>
+                    <div class="stat"><span class="stat-num" data-count="13">0</span><span class="eyebrow">Pitches</span></div>
+                    <div class="stat"><span class="stat-num" data-count="56">0</span><span class="eyebrow">Pages in Valen's GDD</span></div>
                 </div>
             </div>
+        </section>
 
-            <div class="accordion-item reveal delay-2">
-                <button class="accordion-header">
-                    <h3>Design Ideas & Pitches</h3>
-                    <span class="accordion-icon">+</span>
-                </button>
-                <div class="accordion-content">
-                    <div class="accordion-inner">
-                        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Novel concepts, gameplay prototypes, and elevator pitches for future development.</p>
-                        
-                        <div class="document-grid">
-                            
-                            <div class="doc-card">
-                                <h4>10 Minutes Ahead</h4>
-                                <p>A stealth-strategy game where you experience events 10 minutes before they occur, giving you the chance to strategically prevent or manipulate them.</p>
-                                <a href="Docs/10 Minutes Ahead.pdf" target="_blank" class="btn-outline">Read Pitch</a>
-                            </div>
-
-                            <div class="doc-card">
-                                <h4>Reverse Heist</h4>
-                                <p>A stealth-action game that inverts the traditional heist, tasking players to infiltrate highly secured locations to quietly return dangerous, cursed artifacts.</p>
-                                <a href="Docs/Reverse Heist.pdf" target="_blank" class="btn-outline">Read Pitch</a>
-                            </div>
-
-                            <div class="doc-card">
-                                <h4>Shadow Match</h4>
-                                <p>A relaxing 3D puzzle game where players solve visual challenges by freely rotating and aligning abstract objects to perfectly match a target shadow silhouette.</p>
-                                <a href="Docs/Shadow Match.pdf" target="_blank" class="btn-outline">Read Pitch</a>
-                            </div>
-
-                            <div class="doc-card">
-                                <h4>Power Debt</h4>
-                                <p>An action roguelite where every overpowered hack 'n' slash ability you use is free upfront—but creates a chaotic "debt" that the world will unpredictably collect later.</p>
-                                <a href="Docs/Power Debt.pdf" target="_blank" class="btn-outline">Read Pitch</a>
-                            </div>
-
-                            <div class="doc-card">
-                                <h4>Museum of Lives</h4>
-                                <p>A narrative adventure where you wake up inside a museum of unfinished lives, reconstructing broken memories before realizing you might be an exhibit yourself.</p>
-                                <a href="Docs/MUSEUM OF LIVES.pdf" target="_blank" class="btn-outline">Read Pitch</a>
-                            </div>
-
-                            <div class="doc-card">
-                                <h4>Quiet Sea</h4>
-                                <p>A deep-sea narrative mystery where an isolated communication engineer must repair an abandoned station that is secretly receiving signals from the future.</p>
-                                <a href="Docs/Quiet Sea.pdf" target="_blank" class="btn-outline">Read Pitch</a>
-                            </div>
-
-                            <div class="doc-card">
-                                <h4>Different Physics</h4>
-                                <p>A chaotic party platformer where everyone is playing the same game, but every player follows a completely different set of randomized physics rules.</p>
-                                <a href="Docs/Different Physics Multiplayer.pdf" target="_blank" class="btn-outline">Read Pitch</a>
-                            </div>
-
-                            <div class="doc-card">
-                                <h4>Background Character</h4>
-                                <p>A choice-driven narrative adventure where you are an ordinary NPC. Your small, mundane actions quietly create butterfly effects that change how the hero's grand quest ends.</p>
-                                <a href="Docs/Background Character.pdf" target="_blank" class="btn-outline">Read Pitch</a>
-                            </div>
-
-                            <div class="doc-card">
-                                <h4>Time Bankruptcy</h4>
-                                <p>An action roguelite where you wield devastating temporal abilities, but every attack or dodge physically ages you and burns through your own limited lifespan.</p>
-                                <a href="Docs/Time Bankruptcy.pdf" target="_blank" class="btn-outline">Read Pitch</a>
-                            </div>
-
-                            <div class="doc-card">
-                                <h4>Sin Hunter</h4>
-                                <p>A hack 'n' slash adventure where you hunt the living embodiments of the Seven Deadly Sins, choosing to either purify their corrupting power or wield it yourself.</p>
-                                <a href="Docs/Sin Hunter.pdf" target="_blank" class="btn-outline">Read Pitch</a>
-                            </div>
-
-                            <div class="doc-card">
-                                <h4>The Man Who Can Pause The World</h4>
-                                <p>A supernatural thriller where you can freeze time, but the temporal entity that gave you this power is secretly learning how to enter reality through you.</p>
-                                <a href="Docs/The Man Who Can Pause The World.pdf" target="_blank" class="btn-outline">Read Pitch</a>
-                            </div>
-
-                            <div class="doc-card">
-                                <h4>The Reverse War</h4>
-                                <p>A mind-bending sci-fi thriller where you fight a hidden war across forward and reversed timelines, coordinating actions from opposite directions in time.</p>
-                                <a href="Docs/The Reverse War.pdf" target="_blank" class="btn-outline">Read Pitch</a>
-                            </div>
-
-                            <div class="doc-card">
-                                <h4>The Dream Invasion</h4>
-                                <p>An action-adventure where humanity's worst nightmares physically manifest in the real world, forcing you to use unstable supernatural powers to fight back.</p>
-                                <a href="Docs/THE DREAM INVASION.pdf" target="_blank" class="btn-outline">Read Pitch</a>
-                            </div>
-
-                        </div>
-                    </div>
+        <section class="section" id="documents">
+            <div class="section-head">
+                <div>
+                    <p class="eyebrow reveal"><span class="idx">01</span>Game design documents</p>
+                    <h2 class="section-title split">Built to be built</h2>
                 </div>
             </div>
+            <div class="docs">
+                <div class="doc-wrap reveal">
+                    <a class="doc" href="Docs/Project%20Valen%20Design%20Document.pdf" target="_blank" rel="noopener" data-tilt data-cursor="read">
+                        <div class="doc-head"><span class="project-num"><b>01</b> / 05</span><div class="tags"><span class="tag tag-award">56 pages</span><span class="tag">Hack and slash</span></div></div>
+                        <h3 class="doc-title">Project Valen</h3>
+                        <p>A dark cyberpunk hack-and-slash adventure with insect-themed factions, temporal mechanics and deep lore.</p>
+                        <span class="doc-cta">Read document <span>↗</span></span>
+                    </a>
+                </div>
+                <div class="doc-wrap reveal" style="--d:100ms">
+                    <a class="doc" href="Docs/Roguefire%20Design%20Document.pdf" target="_blank" rel="noopener" data-tilt data-cursor="read">
+                        <div class="doc-head"><span class="project-num"><b>02</b> / 05</span><div class="tags"><span class="tag">Roguelike action</span></div></div>
+                        <h3 class="doc-title">Roguefire</h3>
+                        <p>Room-by-room combat, dynamic skill pools and complex enemy synergies.</p>
+                        <span class="doc-cta">Read document <span>↗</span></span>
+                    </a>
+                </div>
+                <div class="doc-wrap reveal" style="--d:200ms">
+                    <a class="doc" href="Docs/The%20Silent%20Floor%20_%20Room%20309%20Design%20Document.docx.pdf" target="_blank" rel="noopener" data-tilt data-cursor="read">
+                        <div class="doc-head"><span class="project-num"><b>03</b> / 05</span><div class="tags"><span class="tag">Psychological horror</span></div></div>
+                        <h3 class="doc-title">The Silent Floor</h3>
+                        <p>Spatial looping, environmental manipulation and a narrative mystery inside a surreal hotel.</p>
+                        <span class="doc-cta">Read document <span>↗</span></span>
+                    </a>
+                </div>
+                <div class="doc-wrap reveal">
+                    <a class="doc" href="Docs/Chhota%20Bheem_%20Hidden%20Objects%20Design%20Document.docx.pdf" target="_blank" rel="noopener" data-tilt data-cursor="read">
+                        <div class="doc-head"><span class="project-num"><b>04</b> / 05</span><div class="tags"><span class="tag">Shipped</span><span class="tag">Hidden object</span></div></div>
+                        <h3 class="doc-title">Hidden Objects</h3>
+                        <p>Core hidden object loops, forensic mechanics, dynamic level variants and scoring systems.</p>
+                        <span class="doc-cta">Read document <span>↗</span></span>
+                    </a>
+                </div>
+                <div class="doc-wrap reveal" style="--d:100ms">
+                    <a class="doc" href="Docs/Chhota%20Bheem_%20Cooking%20Mania%20Design%20Document.docx.pdf" target="_blank" rel="noopener" data-tilt data-cursor="read">
+                        <div class="doc-head"><span class="project-num"><b>05</b> / 05</span><div class="tags"><span class="tag">Shipped</span><span class="tag">Time management</span></div></div>
+                        <h3 class="doc-title">Cooking Mania</h3>
+                        <p>Time-management mechanics, progression formulas and economy balancing for a restaurant arcade game.</p>
+                        <span class="doc-cta">Read document <span>↗</span></span>
+                    </a>
+                </div>
+            </div>
+        </section>
 
-        </div>
+        <section class="section" id="pitches">
+            <div class="section-head">
+                <div>
+                    <p class="eyebrow reveal"><span class="idx">02</span>Pitches</p>
+                    <h2 class="section-title split">What if…</h2>
+                </div>
+            </div>
+            <ol class="pitches">
+                <li class="pitch reveal">
+                    <a href="Docs/10%20Minutes%20Ahead.pdf" target="_blank" rel="noopener" data-cursor="read">
+                        <span class="work-num">01</span>
+                        <span class="pitch-name">10 Minutes Ahead</span>
+                        <span class="tag">Stealth strategy</span>
+                        <span class="work-arrow">↗</span>
+                        <span class="pitch-more"><p>A stealth-strategy game where you experience events 10 minutes before they occur, giving you the chance to prevent or manipulate them.</p></span>
+                    </a>
+                </li>
+                <li class="pitch reveal">
+                    <a href="Docs/Reverse%20Heist.pdf" target="_blank" rel="noopener" data-cursor="read">
+                        <span class="work-num">02</span>
+                        <span class="pitch-name">Reverse Heist</span>
+                        <span class="tag">Stealth action</span>
+                        <span class="work-arrow">↗</span>
+                        <span class="pitch-more"><p>A stealth-action game that inverts the traditional heist: infiltrate highly secured locations to quietly return dangerous, cursed artifacts.</p></span>
+                    </a>
+                </li>
+                <li class="pitch reveal">
+                    <a href="Docs/Shadow%20Match.pdf" target="_blank" rel="noopener" data-cursor="read">
+                        <span class="work-num">03</span>
+                        <span class="pitch-name">Shadow Match</span>
+                        <span class="tag">3D puzzle</span>
+                        <span class="work-arrow">↗</span>
+                        <span class="pitch-more"><p>A relaxing 3D puzzle game where players rotate and align abstract objects until they perfectly match a target shadow silhouette.</p></span>
+                    </a>
+                </li>
+                <li class="pitch reveal">
+                    <a href="Docs/Power%20Debt.pdf" target="_blank" rel="noopener" data-cursor="read">
+                        <span class="work-num">04</span>
+                        <span class="pitch-name">Power Debt</span>
+                        <span class="tag">Action roguelite</span>
+                        <span class="work-arrow">↗</span>
+                        <span class="pitch-more"><p>An action roguelite where every overpowered hack-and-slash ability is free upfront, but creates a chaotic debt the world will unpredictably collect later.</p></span>
+                    </a>
+                </li>
+                <li class="pitch reveal">
+                    <a href="Docs/MUSEUM%20OF%20LIVES.pdf" target="_blank" rel="noopener" data-cursor="read">
+                        <span class="work-num">05</span>
+                        <span class="pitch-name">Museum of Lives</span>
+                        <span class="tag">Narrative adventure</span>
+                        <span class="work-arrow">↗</span>
+                        <span class="pitch-more"><p>A narrative adventure where you wake inside a museum of unfinished lives, reconstructing broken memories before realising you might be an exhibit yourself.</p></span>
+                    </a>
+                </li>
+                <li class="pitch reveal">
+                    <a href="Docs/Quiet%20Sea.pdf" target="_blank" rel="noopener" data-cursor="read">
+                        <span class="work-num">06</span>
+                        <span class="pitch-name">Quiet Sea</span>
+                        <span class="tag">Narrative mystery</span>
+                        <span class="work-arrow">↗</span>
+                        <span class="pitch-more"><p>A deep-sea mystery where an isolated communication engineer repairs an abandoned station that is secretly receiving signals from the future.</p></span>
+                    </a>
+                </li>
+                <li class="pitch reveal">
+                    <a href="Docs/Different%20Physics%20Multiplayer.pdf" target="_blank" rel="noopener" data-cursor="read">
+                        <span class="work-num">07</span>
+                        <span class="pitch-name">Different Physics</span>
+                        <span class="tag">Party platformer</span>
+                        <span class="work-arrow">↗</span>
+                        <span class="pitch-more"><p>A chaotic party platformer where everyone plays the same game, but each player follows a completely different set of randomised physics rules.</p></span>
+                    </a>
+                </li>
+                <li class="pitch reveal">
+                    <a href="Docs/Background%20Character.pdf" target="_blank" rel="noopener" data-cursor="read">
+                        <span class="work-num">08</span>
+                        <span class="pitch-name">Background Character</span>
+                        <span class="tag">Choice-driven narrative</span>
+                        <span class="work-arrow">↗</span>
+                        <span class="pitch-more"><p>You are an ordinary NPC. Your small, mundane actions quietly create butterfly effects that change how the hero&#39;s grand quest ends.</p></span>
+                    </a>
+                </li>
+                <li class="pitch reveal">
+                    <a href="Docs/Time%20Bankruptcy.pdf" target="_blank" rel="noopener" data-cursor="read">
+                        <span class="work-num">09</span>
+                        <span class="pitch-name">Time Bankruptcy</span>
+                        <span class="tag">Action roguelite</span>
+                        <span class="work-arrow">↗</span>
+                        <span class="pitch-more"><p>An action roguelite with devastating temporal abilities, where every attack or dodge ages you and burns through your own limited lifespan.</p></span>
+                    </a>
+                </li>
+                <li class="pitch reveal">
+                    <a href="Docs/Sin%20Hunter.pdf" target="_blank" rel="noopener" data-cursor="read">
+                        <span class="work-num">10</span>
+                        <span class="pitch-name">Sin Hunter</span>
+                        <span class="tag">Hack and slash</span>
+                        <span class="work-arrow">↗</span>
+                        <span class="pitch-more"><p>Hunt the living embodiments of the Seven Deadly Sins, then choose to purify their corrupting power or wield it yourself.</p></span>
+                    </a>
+                </li>
+                <li class="pitch reveal">
+                    <a href="Docs/The%20Man%20Who%20Can%20Pause%20The%20World.pdf" target="_blank" rel="noopener" data-cursor="read">
+                        <span class="work-num">11</span>
+                        <span class="pitch-name">The Man Who Can Pause the World</span>
+                        <span class="tag">Supernatural thriller</span>
+                        <span class="work-arrow">↗</span>
+                        <span class="pitch-more"><p>You can freeze time, but the temporal entity that gave you the power is secretly learning how to enter reality through you.</p></span>
+                    </a>
+                </li>
+                <li class="pitch reveal">
+                    <a href="Docs/The%20Reverse%20War.pdf" target="_blank" rel="noopener" data-cursor="read">
+                        <span class="work-num">12</span>
+                        <span class="pitch-name">The Reverse War</span>
+                        <span class="tag">Sci-fi thriller</span>
+                        <span class="work-arrow">↗</span>
+                        <span class="pitch-more"><p>Fight a hidden war across forward and reversed timelines, coordinating actions from opposite directions in time.</p></span>
+                    </a>
+                </li>
+                <li class="pitch reveal">
+                    <a href="Docs/THE%20DREAM%20INVASION.pdf" target="_blank" rel="noopener" data-cursor="read">
+                        <span class="work-num">13</span>
+                        <span class="pitch-name">The Dream Invasion</span>
+                        <span class="tag">Action adventure</span>
+                        <span class="work-arrow">↗</span>
+                        <span class="pitch-more"><p>Humanity&#39;s worst nightmares manifest in the real world, and you fight back with unstable supernatural powers.</p></span>
+                    </a>
+                </li>            </ol>
+        </section>
+
+        <section class="contact glow" id="contact">
+            <p class="eyebrow reveal">Contact</p>
+            <h2 class="contact-title split">Got an idea worth<br><em>building?</em></h2>
+            <div class="contact-actions reveal">
+                <a href="mailto:jatinnakashe@gmail.com" class="btn btn-primary" data-magnetic>jatinnakashe@gmail.com</a>
+            </div>
+            <div class="contact-actions reveal" style="margin-top:14px; --d:120ms">
+                <a href="Commercial.html" class="btn" data-magnetic>Commercial games ↗</a>
+                <a href="Personal.html" class="btn" data-magnetic>Personal projects ↗</a>
+            </div>
+        </section>
     </main>
 
-    <footer>
-        <p>© 2026 Jatin Nakashe. Game Designer.</p>
+    <footer class="footer">
+        <p class="wordmark split" aria-hidden="true">Jatin Nakashe</p>
+        <div class="footer-bar">
+            <span>© 2026 Jatin Nakashe — Game Designer</span>
+            <nav aria-label="Footer">
+                <a href="https://www.linkedin.com/in/jatin-nakashe" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="Portfolio.html">Portfolio</a>
+                <a href="#top">Back to top ↑</a>
+            </nav>
+        </div>
     </footer>
 
-    <div class="social-fab">
-        <a href="https://www.linkedin.com/in/jatin-nakashe" target="_blank" aria-label="LinkedIn">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-        </a>
-        
-        <a href="mailto:jatinnakashe@gmail.com" aria-label="Email">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-        </a>
-    </div>
+    <script src="site.js"></script>
 
-    <script>
-        // Page Reveal Transition
-        function revealPage() {
-            window.isNavigating = false;
-            const transitionEl = document.querySelector('.page-transition');
-            if (transitionEl) {
-                transitionEl.classList.remove('leaving');
-                setTimeout(() => { transitionEl.classList.add('loaded'); }, 100);
-            }
-        }
-        revealPage();
-        window.addEventListener('pageshow', revealPage);
-
-        // Lenis Smooth Scrolling
-        const lenis = new Lenis({ duration: 1.2, easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), smooth: true });
-        function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
-        requestAnimationFrame(raf);
-        window.onbeforeunload = function () { window.scrollTo(0, 0); };
-
-        // Scroll Animations
-        document.addEventListener("DOMContentLoaded", function() {
-            const revealElements = document.querySelectorAll(".reveal");
-            if (revealElements.length > 0) {
-                const revealOptions = { threshold: 0.15 };
-                const revealOnScroll = new IntersectionObserver(function(entries, observer) {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) { entry.target.classList.add("active"); observer.unobserve(entry.target); }
-                    });
-                }, revealOptions);
-                revealElements.forEach(el => revealOnScroll.observe(el));
-            }
-        });
-
-        // ==========================================
-        // ACCORDION LOGIC (FIXED)
-        // ==========================================
-        document.addEventListener('DOMContentLoaded', () => {
-            const accordions = document.querySelectorAll('.accordion-item');
-            
-            accordions.forEach(acc => {
-                const header = acc.querySelector('.accordion-header');
-                header.addEventListener('click', () => {
-                    acc.classList.toggle('expanded');
-                });
-            });
-        });
-
-       // Page Transitions & Router
-        document.addEventListener('click', function(e) {
-            const link = e.target.closest('a');
-            if (!link) return;
-            
-            if (link.getAttribute('target') === '_blank') {
-                return; 
-            }
-
-            const targetUrl = link.getAttribute('href');
-            if (!targetUrl || targetUrl === '#') return;
-            if (link.classList.contains('nav-logo') && targetUrl === '#hero-screen') { e.preventDefault(); lenis.scrollTo(0); return; }
-            if (targetUrl.startsWith('#')) { e.preventDefault(); lenis.scrollTo(targetUrl, { offset: -50 }); return; }
-            if (targetUrl.startsWith('mailto:') || targetUrl.startsWith('http')) return; 
-            
-            e.preventDefault();
-            if (window.isNavigating) return;
-            window.isNavigating = true;
-            const transitionEl = document.querySelector('.page-transition');
-            if (transitionEl) {
-                transitionEl.classList.remove('loaded');
-                transitionEl.classList.add('leaving');
-                setTimeout(() => {
-                    window.location.href = targetUrl;
-                    setTimeout(() => { if (window.isNavigating) revealPage(); }, 1500);
-                }, 850);
-            } else { window.location.href = targetUrl; }
-        });
-    </script>
 </body>
 </html>

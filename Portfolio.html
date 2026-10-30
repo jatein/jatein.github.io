@@ -4,9 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio | Jatin Nakashe</title>
-    <link rel="icon" type="image/png" href="Images/favicon.png">
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&display=swap" rel="stylesheet">
+    <meta name="description" content="Jatin Nakashe's portfolio: commercial games, personal projects and original game design concepts.">
+    <meta name="theme-color" content="#0d0c0b">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="Images/favicon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="site.css">
     <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
 
     <!-- Google tag (gtag.js) -->
@@ -19,193 +25,92 @@
   gtag('config', 'G-4GN5QG210P');
 </script>
 
-
 </head>
 <body>
 
-    <div class="page-transition">
-        <div class="swipe-layer cyan-layer"></div>
-        <div class="swipe-layer dark-layer"></div>
-    </div>
+    <div class="curtain enter" aria-hidden="true"></div>
+    <div class="progress" aria-hidden="true"></div>
+    <div class="cursor" aria-hidden="true"></div>
+    <div class="cursor-ring" aria-hidden="true">View</div>
 
-    <div class="global-video-bg">
-        <video autoplay muted loop playsinline id="bg-video">
-            <source src="background.mp4" type="video/mp4">
-        </video>
-        <div class="video-overlay"></div>
-    </div>
+    <header class="nav" id="nav">
+        <a href="index.html" class="nav-name intro">Jatin Nakashe</a>
+        <nav class="nav-links intro" aria-label="Primary" style="--d:100ms">
+            <a href="index.html">Home</a>
+            <a href="index.html#contact" class="nav-contact">Contact</a>
+            <a href="Portfolio.html" class="nav-portfolio active" data-magnetic><span class="roll"><span>Portfolio</span></span></a>
+            <a href="Jatin_Nakashe-Resume.pdf" download="Jatin_Nakashe_Resume.pdf" class="nav-resume" data-magnetic><span class="roll"><span>Résumé</span></span><span class="nav-ico" aria-hidden="true">↓</span></a>
+        </nav>
+    </header>
 
-    <nav class="top-nav">
-        <a href="index.html" class="nav-logo">Jatin Nakashe</a>
-        <div class="nav-links">
-            <a href="index.html#about">About</a>
-            <a href="index.html#backstory">Background</a>
-            <a href="index.html#experience">Work</a>
-            <a href="index.html#skills">Skills</a>
-        </div>
+    <main id="top">
 
-        <div style="display: flex; gap: 1rem; align-items: center;">
-        <a href="#" class="nav-cta active">Portfolio</a>
-
-        <a href="Jatin_Nakashe-Resume.pdf" download="Jatin_Nakashe_Resume.pdf" class="resume-download-btn">
-                <svg class="download-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                    <polyline points="7 10 12 15 17 10"></polyline>
-                    <line x1="12" y1="15" x2="12" y2="3"></line>
-                </svg>
-                <span class="download-text">Resume</span>
-            </a>
-        </div>
-    </nav>
-
-    <div class="vertical-side-title">PORTFOLIO</div>
-
-    <main id="main-content" style="margin-top: 15vh; min-height: 80vh; padding: 0 5%; position: relative; z-index: 10;">
-        
-        <div style="text-align: center; margin-bottom: 3rem; padding: 2rem 0;">
-            <p style="color: var(--text-secondary); font-size: 1.272rem; max-width: 600px; margin: 0 auto;">
-                Select a category below to explore my detailed galleries, design documents, and gameplay breakdowns.
-            </p>
-        </div>
-
-        <div class="portfolio-grid">
-            
-            <a href="Commercial.html" class="exp-card reveal delay-1" style="text-decoration: none;">
-                <div class="exp-image" style="background: url('Images/commercial-bg.jpg') center/cover no-repeat;"></div>
-                <div class="exp-overlay">
-                    <div class="exp-content">
-                        <h4>Commercial Games</h4>
-                        <p class="exp-subtext">13 Projects</p>
-                    </div>
+        <section class="page-head glow">
+            <p class="eyebrow crumbs intro" style="--d:200ms"><a href="index.html">Home</a> <span>/</span> <span class="idx">Portfolio</span></p>
+            <h1 class="hero-title page-title split">The <em>portfolio</em></h1>
+            <div class="page-foot intro" style="--d:600ms">
+                <p class="hero-intro">Pick a collection to explore case studies, galleries, gameplay videos and full design documents.</p>
+                <div class="stats">
+                    <a href="Commercial.html" class="stat"><span class="stat-num" data-count="10">0</span><span class="eyebrow">Commercial games</span></a>
+                    <a href="Personal.html" class="stat"><span class="stat-num" data-count="10" data-suffix="+">0</span><span class="eyebrow">Personal projects</span></a>
+                    <a href="Ideas.html" class="stat"><span class="stat-num" data-count="20" data-suffix="+">0</span><span class="eyebrow">Design concepts</span></a>
                 </div>
+            </div>
+        </section>
+
+        <nav class="cats" aria-label="Portfolio collections">
+            <a href="Commercial.html" class="cat intro" style="--d:700ms" data-cursor="view">
+                <img src="Images/Core%20Trials/scene1.png" alt="">
+                <span class="cat-num">01</span>
+                <span class="cat-arrow" aria-hidden="true">→</span>
+                <span class="eyebrow">10 titles</span>
+                <h2 class="cat-title">Commercial games</h2>
+                <p class="cat-desc">Shipped studio titles and indie releases, from a motion-controlled roguelike to licensed Chhota Bheem games.</p>
             </a>
-
-         <a href="Personal.html" class="exp-card reveal delay-2" style="text-decoration: none;">
-                <div class="exp-image" style="background: url('Images/personal-bg.jpg') center/cover no-repeat;"></div>
-                <div class="exp-overlay">
-                    <div class="exp-content">
-                        <h4>Personal Projects</h4>
-                        <p class="exp-subtext">10+ Projects</p>
-                    </div>
-                </div>
+            <a href="Personal.html" class="cat intro" style="--d:820ms" data-cursor="view">
+                <img src="Images/personal-bg.jpg" alt="">
+                <span class="cat-num">02</span>
+                <span class="cat-arrow" aria-hidden="true">→</span>
+                <span class="eyebrow">10+ projects</span>
+                <h2 class="cat-title">Personal projects</h2>
+                <p class="cat-desc">Technical art, Unreal VFX and destruction, environments, matte paintings and 3D modelling.</p>
             </a>
+            <a href="Ideas.html" class="cat intro" style="--d:940ms" data-cursor="view">
+                <img src="Images/ideas-bg.jpg" alt="">
+                <span class="cat-num">03</span>
+                <span class="cat-arrow" aria-hidden="true">→</span>
+                <span class="eyebrow">20+ concepts</span>
+                <h2 class="cat-title">Design ideas</h2>
+                <p class="cat-desc">Original game concepts, each written up as a design document.</p>
+            </a>
+        </nav>
 
-          <a href="Ideas.html" class="exp-card reveal delay-3" style="text-decoration: none;">
-                    <div class="exp-image" style="background: url('Images/ideas-bg.jpg') center/cover no-repeat;"></div>
-                    <div class="exp-overlay">
-                        <div class="exp-content">
-                            <h4>Design Ideas</h4>
-                            <p class="exp-subtext">20+ Concepts</p>
-                        </div>
-                    </div>
-                </a>
-
-        </div>
+        <section class="contact glow" id="contact">
+            <p class="eyebrow reveal">Contact</p>
+            <h2 class="contact-title split">Let's make something<br><em>worth playing.</em></h2>
+            <div class="contact-actions reveal">
+                <a href="mailto:jatinnakashe@gmail.com" class="btn btn-primary" data-magnetic>jatinnakashe@gmail.com</a>
+            </div>
+            <div class="contact-actions reveal" style="margin-top:14px; --d:120ms">
+                <a href="https://www.linkedin.com/in/jatin-nakashe" target="_blank" rel="noopener" class="btn" data-magnetic>LinkedIn ↗</a>
+                <a href="Jatin_Nakashe-Resume.pdf" download="Jatin_Nakashe_Resume.pdf" class="btn" data-magnetic>Résumé ↓</a>
+            </div>
+        </section>
     </main>
 
-    <footer>
-        <p>© 2026 Jatin Nakashe. Game Designer.</p>
+    <footer class="footer">
+        <p class="wordmark split" aria-hidden="true">Jatin Nakashe</p>
+        <div class="footer-bar">
+            <span>© 2026 Jatin Nakashe — Game Designer</span>
+            <nav aria-label="Footer">
+                <a href="https://www.linkedin.com/in/jatin-nakashe" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="index.html">Home</a>
+                <a href="#top">Back to top ↑</a>
+            </nav>
+        </div>
     </footer>
 
-    <div class="social-fab">
-        <a href="https://www.linkedin.com/in/jatin-nakashe" target="_blank" aria-label="LinkedIn">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-        </a>
-       
-        <a href="mailto:jatinnakashe@gmail.com" aria-label="Email">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-        </a>
-    </div>
+    <script src="site.js"></script>
 
-    <script>
-        function revealPage() {
-            window.isNavigating = false;
-            const transitionEl = document.querySelector('.page-transition');
-            if (transitionEl) {
-                transitionEl.classList.remove('leaving');
-                setTimeout(() => { transitionEl.classList.add('loaded'); }, 100);
-            }
-        }
-        revealPage(); 
-        window.addEventListener('pageshow', revealPage);
-
-        const lenis = new Lenis({ duration: 1.2, easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), smooth: true });
-        function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
-        requestAnimationFrame(raf);
-        window.onbeforeunload = function () { window.scrollTo(0, 0); };
-
-        const heroElement = document.getElementById("scramble-text");
-        const expElement = document.getElementById("scramble-exp");
-        if (heroElement && expElement) {
-            const heroWords = ["Game", "Economy", "System", "Character", "Technical"];
-            const expWords = ["Experience", "Work"]; 
-            let currentIndex = 0;
-            const chars = "ABCDEFGHJKLNPQRSTUVXYZ0123456789#&*"; 
-            function scrambleWord(element, target) {
-                let iteration = 0;
-                const currentText = element.innerText;
-                const maxLength = Math.min(10, Math.max(currentText.length, target.length));
-                let interval = setInterval(() => {
-                    let scrambled = "";
-                    for (let i = 0; i < maxLength; i++) {
-                        if (i < iteration) { scrambled += target[i] || ""; } 
-                        else { scrambled += chars[Math.floor(Math.random() * chars.length)]; }
-                    }
-                    element.innerText = scrambled;
-                    if (iteration >= maxLength) { clearInterval(interval); element.innerText = target; }
-                    iteration += 0.6; 
-                }, 60); 
-            }
-            setTimeout(() => { setInterval(() => { currentIndex++; scrambleWord(heroElement, heroWords[currentIndex % heroWords.length]); scrambleWord(expElement, expWords[currentIndex % expWords.length]); }, 2500); }, 3500);
-        }
-
-        document.addEventListener("DOMContentLoaded", function() {
-            const scrollDown = document.querySelector('.scroll-down');
-            const heroScreen = document.getElementById('hero-screen');
-            window.addEventListener('scroll', () => {
-                let scrollY = window.scrollY;
-                if (scrollDown) { scrollDown.style.opacity = scrollY > 100 ? "0" : "1"; scrollDown.style.pointerEvents = scrollY > 100 ? "none" : "auto"; }
-                if (heroScreen) {
-                    let startFade = window.innerHeight * 0.4; let endFade = window.innerHeight * 0.8; let opacity = 1; 
-                    if (scrollY > startFade) opacity = 1 - ((scrollY - startFade) / (endFade - startFade));
-                    if (opacity <= 0) { heroScreen.style.opacity = "0"; heroScreen.style.visibility = "hidden"; } 
-                    else { heroScreen.style.opacity = opacity.toString(); heroScreen.style.visibility = "visible"; }
-                }
-            });
-            const revealElements = document.querySelectorAll(".reveal");
-            if (revealElements.length > 0) {
-                const revealOptions = { threshold: 0.15 };
-                const revealOnScroll = new IntersectionObserver(function(entries, observer) {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) { entry.target.classList.add("active"); observer.unobserve(entry.target); }
-                    });
-                }, revealOptions);
-                revealElements.forEach(el => revealOnScroll.observe(el));
-            }
-        });
-
-        document.addEventListener('click', function(e) {
-            const link = e.target.closest('a');
-            if (!link) return;
-            const targetUrl = link.getAttribute('href');
-            if (!targetUrl || targetUrl === '#') return;
-            if (link.classList.contains('nav-logo') && targetUrl === '#hero-screen') { e.preventDefault(); lenis.scrollTo(0); return; }
-            if (targetUrl.startsWith('#')) { e.preventDefault(); lenis.scrollTo(targetUrl, { offset: -50 }); return; }
-            if (targetUrl.startsWith('mailto:') || targetUrl.startsWith('http')) return; 
-            
-            e.preventDefault();
-            if (window.isNavigating) return;
-            window.isNavigating = true;
-            const transitionEl = document.querySelector('.page-transition');
-            if (transitionEl) {
-                transitionEl.classList.remove('loaded');
-                transitionEl.classList.add('leaving');
-                setTimeout(() => {
-                    window.location.href = targetUrl;
-                    setTimeout(() => { if (window.isNavigating) revealPage(); }, 1500);
-                }, 850);
-            } else { window.location.href = targetUrl; }
-        });
-    </script>
 </body>
 </html>
